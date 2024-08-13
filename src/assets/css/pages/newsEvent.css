@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+#newsEvents{
+
+    margin:0 auto;
+    padding: 100px 0px 0px 100px;
+    background-color: #101010;
+}
+
+#newsEvents .newsEventsMain {
+
+   background-color: #101010;
+
+}
+
+#newsEvents .newsEventsMain .newsEventsTitleboxs{
+
+    width: 100%;
+    padding: 90px 0px;
+    margin:0 auto;
+}
+
+#newsEvents .newsEventsMain .newsEventsTitleboxs h5{
+
+    font-size: 6.3rem;
+    font-weight: 500;
+    color:#fff;
+    padding:0px 50px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+#newsEvents .newsEventsMain .newsEventContents{
+
+    width:calc(100% - 100px);
+    padding:0px 0px 100px;
+    margin:0 auto;
+}
+
+#newsEvents .newsEventsMain .newsEventContents .categoryBoxies{
+
+    width: 100%;
+    margin:0 auto;
+    border-top:1px solid #343434;
+    
+}
+
+/* categoryBoxies ul 공통 */
+
+#newsEvents .newsEventsMain .newsEventContents .categoryBoxies ul{
+
+    width: 100%;
+    padding:20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/**/
+
+#newsEvents .newsEventsMain .newsEventContents .categoryBoxies ul .filterList{
+
+    padding: 23px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-position: center center;
+    background-size: 22px;
+    background-repeat: no-repeat;
+    margin-right:10px;
+}
+
+/* categoryBoxies ul li 공통 */
+
+#newsEvents .newsEventsMain .newsEventContents .categoryBoxies ul li{
+
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:10px;
+}
+
+#newsEvents .newsEventsMain .newsEventContents .categoryBoxies ul li button{
+
+    color:#C6C6C6;
+    padding: 14.5px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    background-color: #1e1e1e;
+    cursor: pointer;
+}
+
+/**/
+
+#newsEvents .newsEventsMain .newsEventContents .categoryBoxies ul.categorys li button:hover{
+
+    color:#fff;
+    background-color:#c9125c;
+}
+
+#newsEvents .newsEventsMain .newsEventContents .categoryBoxies .subCategoryBoxies{
+
+    padding-left:56px;
+    border-top: 1px solid #343434;
+    border-top-style: dashed;
+}
+
+#newsEvents .newsEventsMain .newsEventContents .categoryBoxies .subCategoryBoxies .subCategory li button{
+
+    padding: 6.5px 20px;
+    cursor:default;
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies {
+
+    width: 100%;
+    margin:0 auto;
+    padding:26.5px 0px;
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultCount{
+
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultCount h3{
+
+    font-size: 14px;
+    font-weight: 700;
+    color:#A9A9A9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultCount h3 span{
+
+    color:#fff;
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultCount button{
+
+    width: 61px;
+    height: 22px;
+    text-align: center;
+    color:#fff;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    background-position:40px center;
+    background-repeat: no-repeat;
+    background-size: 19px;
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas{
+
+    width: 100%;
+    margin:0 auto;
+    padding-top:30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul{
+
+    width:553px;
+    height:456px;
+    margin:0px 10px 30px 0px;
+    cursor: pointer;
+    /* padding:127.5px 176.5px; */
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li{
+
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .imgBoxs{
+
+    width: 100%;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom:30px;
+
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .imgBoxs img{
+
+    height:100%;
+    object-fit: cover;
+    transform: scale(1.0);
+    transition:  transform 500ms;
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .imgBoxs:hover img{
+
+    transform: scale(1.1);
+    transition: transform 500ms;
+}
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .titleBoxs{
+
+    width: 100%;
+    padding:7px 0px;
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+
+} 
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .titleBoxs p{
+
+    color:#CB3A74;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    padding-right:9px;
+    float:left;
+    
+
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .titleBoxs span{
+
+    color:#666666;
+    font-weight: 400;
+    font-size:14px;
+    padding-left:9px;
+    border-left:1px solid #2D2D2D;
+
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li h2{
+
+    color:#fff;
+    font-size: 20px;
+}
+
+#newsEvents .newsEventsMain .modalWrapper{
+
+
+
+}
+#newsEvents .footerBoxs {
+    width: 100%;
+    margin:0 auto;
+}
+
+
+
+
+@media all and (max-width:1860px) {
+    #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas{
+
+        justify-content: space-evenly;
+    }
+
+}
+    

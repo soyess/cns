@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+.mainPage{ 
+
+   margin:0 auto;
+   background-color: #101010;
+   padding: 100px 0px 0px 100px;
+
+}
+
+.mainPage .mainContents{
+
+   width: 100%;
+   height: 100%;
+   margin: 0 auto;
+   background-color: #101010;
+
+}

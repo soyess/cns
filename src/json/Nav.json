@@ -1,0 +1,14 @@
+{
+
+    "category" : [
+
+        {"title" : "About" , "href" : "/about"},
+        {"title" : "Services & Offerings" , "href" : "/serviceOfferings"},
+        {"title" : "Case Studies" , "href" : "/casestudies"},
+        {"title" : "News & Events" , "href" : "/newsEvent"},
+        {"title" : "Tech Insight" , "href" : "/techinsight"},
+        {"title" : "Ecosystems & Alliances" , "href" : "/ecosystems"},
+        {"title" : "Contact" , "href" : "/contact"}
+    
+    ]
+}
