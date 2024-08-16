@@ -52,10 +52,6 @@
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
-<<<<<<< HEAD
   },
   "homepage": "https://soyess.github.io/lgCns01/"
-=======
-  }
->>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
 }
