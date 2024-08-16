@@ -1,20 +1,17 @@
 {
-
-    "category" :["AWS" , "Google Cloud" , "MS Azure"],
-    "contents" : [
-
-        {"title" : "2024 Google Cloud Innovation Day for LG Group" , "company" : "GoogleLG CNS + Google Cloud" , "dates" : "2024-07-03" , "img" : "img01.png" , "id" : "01"},
-        {"title" : "Duet AI with LG CNS 2024" , "company" : "GoogleLG CNS + Google Cloud" , "dates" : "2024-07-03" , "img" : "img02.png", "id" : "02"},
-        {"title" : "LG CNS, 구글클라우드 '데이터 분석 전문기업' 인증 획득" , "company" : "GoogleLG CNS + Google Cloud" , "dates" : "2024-07-04" , "img" : "img03.png", "id" : "03"},
-        {"title" : "Duet AI with LG CNS 2024_2" , "company" : "LG CNS + AWS" , "dates" : "2024-07-05" , "img" : "img04.png", "id" : "04"},
-        {"title" : "LG CNS, 구글클라우드 '데이터 분석 전문기업' 인증 획득_2" , "company" : "LG CNS + MS Azure" , "dates" : "2024-07-06" , "img" : "img05.png" ,"id" : "05"},
-        {"title" : "2024 Google Cloud Innovation Day for LG Group_2" , "company" : "LG CNS + MS Azure" , "dates" : "2024-07-07" , "img" : "img06.png", "id" : "06"},
-        {"title" : "2024 Google Cloud Innovation Day for LG Group_3" , "company" : "LG CNS + AWS" , "dates" : "2024-07-08" , "img" : "img07.png", "id" : "07"},
-        {"title" : "Duet AI with LG CNS 2024_3" , "company" : "LG CNS + MS Azure" , "dates" : "2024-07-09" , "img" : "img08.png" , "id" : "08"},
-        {"title" : "LG CNS, 구글클라우드 '데이터 분석 전문기업' 인증 획득_3" , "company" : "LG CNS + MS Azure" , "dates" : "2024-07-10" , "img" : "img09.png" , "id" : "09"},
-        {"title" : "2024 Google Cloud Innovation Day for LG Group_4" , "company" : "GoogleLG CNS + Google Cloud" , "dates" : "2024-07-11" , "img" : "img10.png" , "id" : "10"},
-        {"title" : "Duet AI with LG CNS 2024_4" , "company" : "LG CNS + AWS" , "dates" : "2024-07-12" , "img" : "img11.png", "id" : "11"},
-        {"title" : "LG CNS, 구글클라우드 '데이터 분석 전문기업' 인증 획득_4" , "company" : "LG CNS + MS Azure" , "dates" : "2024-07-13" , "img" : "img12.png", "id" : "12"}
-
-    ]
+  "category": ["AWS", "Google Cloud", "MS Azure"],
+  "contents": [
+    { "title": "2024 Google Cloud Innovation Day for LG Group", "company": "GoogleLG CNS + Google Cloud", "dates": "2024-07-03", "img": "img01.png", "id": "01" },
+    { "title": "Duet AI with LG CNS 2024", "company": "GoogleLG CNS + Google Cloud", "dates": "2024-07-03", "img": "img02.png", "id": "02" },
+    { "title": "LG CNS, 구글클라우드 '데이터 분석 전문기업' 인증 획득", "company": "GoogleLG CNS + Google Cloud", "dates": "2024-07-04", "img": "img03.png", "id": "03" },
+    { "title": "Duet AI with LG CNS 2024_2", "company": "LG CNS + AWS", "dates": "2024-07-05", "img": "img04.png", "id": "04" },
+    { "title": "LG CNS, 구글클라우드 '데이터 분석 전문기업' 인증 획득_2", "company": "LG CNS + MS Azure", "dates": "2024-07-06", "img": "img05.png", "id": "05" },
+    { "title": "2024 Google Cloud Innovation Day for LG Group_2", "company": "LG CNS + MS Azure", "dates": "2024-07-07", "img": "img06.png", "id": "06" },
+    { "title": "2024 Google Cloud Innovation Day for LG Group_3", "company": "LG CNS + AWS", "dates": "2024-07-08", "img": "img07.png", "id": "07" },
+    { "title": "Duet AI with LG CNS 2024_3", "company": "LG CNS + MS Azure", "dates": "2024-07-09", "img": "img08.png", "id": "08" },
+    { "title": "LG CNS, 구글클라우드 '데이터 분석 전문기업' 인증 획득_3", "company": "LG CNS + MS Azure", "dates": "2024-07-10", "img": "img09.png", "id": "09" },
+    { "title": "2024 Google Cloud Innovation Day for LG Group_4", "company": "GoogleLG CNS + Google Cloud", "dates": "2024-07-11", "img": "img10.png", "id": "10" },
+    { "title": "Duet AI with LG CNS 2024_4", "company": "LG CNS + AWS", "dates": "2024-07-12", "img": "img11.png", "id": "11" },
+    { "title": "LG CNS, 구글클라우드 '데이터 분석 전문기업' 인증 획득_4", "company": "LG CNS + MS Azure", "dates": "2024-07-13", "img": "img12.png", "id": "12" }
+  ]
 }
