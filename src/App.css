@@ -320,11 +320,11 @@ p,a,h1,h2,h3,h4,h5,span{font-family: Pretendard;}
 .footerWrapper .footerTextContents ul{
 
   width: 100%;
-  padding:10px 0px;
 
 }
 .footerWrapper .footerTextContents ul:first-child{
   border-bottom: 1px solid #212121;
+  padding-bottom:40px;
 }
 .footerWrapper .footerTextContents ul.copyInfo{
   display: flex;
@@ -334,7 +334,7 @@ p,a,h1,h2,h3,h4,h5,span{font-family: Pretendard;}
 
 .footerWrapper .footerTextContents ul li{
 
-  padding:8px 0px;
+  padding:10px 0px;
 }
 
 .footerWrapper .footerTextContents ul li address{
@@ -342,6 +342,7 @@ p,a,h1,h2,h3,h4,h5,span{font-family: Pretendard;}
   color:#fff;
   font-size: 20px;
   font-style: normal;
+  font-weight: 500;
 
 }
 
