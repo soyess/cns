@@ -10,10 +10,18 @@
   background-color: #101010;
 }
 
+<<<<<<< HEAD
 #newsEvents .newsEventsMain .newsEventsTitleboxs {
   width: 100%;
   padding: 90px 0px;
   margin: 0 auto;
+=======
+#newsEvents .newsEventsMain .newsEventsTitleboxs{
+
+    width: 100%;
+    padding: 180px 0px 50px;
+    margin:0 auto;
+>>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
 }
 
 #newsEvents .newsEventsMain .newsEventsTitleboxs h5 {
@@ -97,9 +105,16 @@
 }
 
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies {
+<<<<<<< HEAD
   width: 100%;
   margin: 0 auto;
   padding: 26.5px 0px;
+=======
+
+    width: 100%;
+    margin:0 auto;
+    padding:60px 0px 50px;
+>>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
 }
 
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultCount {
@@ -109,6 +124,7 @@
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultCount h3 {
   font-size: 14px;
   font-weight: 700;
@@ -120,6 +136,23 @@
 
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultCount h3 span {
   color: #fff;
+=======
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultCount h3{
+
+    font-size: 14px;
+    font-weight: 500;
+    color:#A9A9A9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultCount h3 span{
+
+    color:#fff;
+    font-weight: 700;
+>>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
 }
 
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultCount button {
@@ -145,17 +178,28 @@
   flex-wrap: wrap;
 }
 
+<<<<<<< HEAD
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul {
   width: 553px;
   height: 456px;
   margin: 0px 10px 30px 0px;
   cursor: pointer;
   /* padding:127.5px 176.5px; */
+=======
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul{
+
+    width:553px;
+    height:456px;
+    margin:0px 10px 80px 0px;
+    cursor: pointer;
+    /* padding:127.5px 176.5px; */
+>>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
 }
 
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li {
 }
 
+<<<<<<< HEAD
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .imgBoxs {
   width: 100%;
   height: 370px;
@@ -172,18 +216,61 @@
   object-fit: cover;
   transform: scale(1);
   transition: transform 500ms;
+=======
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .imgBoxs{
+
+    width: 100%;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom:30px;
+
+}
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .imgBoxs img{
+
+    height:100%;
+    object-fit: cover;
+    transition:  transform 500ms;
+>>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
 }
 
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .imgBoxs:hover img {
   transform: scale(1.1);
   transition: transform 500ms;
 }
+<<<<<<< HEAD
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .titleBoxs {
   width: 100%;
   padding: 7px 0px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+=======
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .titleBoxs{
+
+    width: 100%;
+    padding:7px 0px 14px;
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+
+} 
+
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .titleBoxs p{
+
+    color:#CB3A74;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    padding-right:9px;
+    float:left;
+    
+
+>>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
 }
 
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .titleBoxs p {
@@ -195,12 +282,20 @@
   float: left;
 }
 
+<<<<<<< HEAD
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li .titleBoxs span {
   color: #666666;
   font-weight: 400;
   font-size: 14px;
   padding-left: 9px;
   border-left: 1px solid #2d2d2d;
+=======
+#newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li h2{
+
+    color:#fff;
+    font-size: 20px;
+    font-weight: 500;
+>>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
 }
 
 #newsEvents .newsEventsMain .newsEventContents .newsEventResultBoxies .resultDatas ul li h2 {

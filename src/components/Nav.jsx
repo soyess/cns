@@ -11,13 +11,7 @@ const NavBar = ({ paths }) => {
 
    const selectValues = [ "KR" , "EN" , "JP"];
 
-   const valuesEvet = () => {
-       
-      const selectBoxs = document.getElementById("languageSelectBox"); //셀렉박스
-      selectBoxs.value = selectedLanguage;
-      console.log('selectBoxValue' , selectBoxs.value)
-   }
-   
+
    const handleSelectClick = (e) => {
        const thisTarget = e.target.innerText;      
        if(thisTarget){ 
@@ -27,15 +21,24 @@ const NavBar = ({ paths }) => {
   
 
    useEffect(() => {
+
+      const valuesEvet = () => {
        
+         const selectBoxs = document.getElementById("languageSelectBox"); //셀렉박스
+         selectBoxs.value = selectedLanguage;
+         console.log('selectBoxValue' , selectBoxs.value)
+      }
+
+             
       if(hrefPaths === undefined || paths === undefined){
          paths = '/';
          return setHrefPaths(paths),
          valuesEvet();
       }
-      setHrefPaths(paths);
-      console.log(paths, 'NavBar');
-      valuesEvet();
+         setHrefPaths(paths);
+         console.log(paths, 'NavBar');
+         valuesEvet();
+   
 
    }, [hrefPaths , selectedLanguage])
 

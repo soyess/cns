@@ -313,10 +313,15 @@ span {
 
 .footerWrapper .footerTextContents ul {
   width: 100%;
+<<<<<<< HEAD
   padding: 10px 0px;
+=======
+
+>>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
 }
 .footerWrapper .footerTextContents ul:first-child {
   border-bottom: 1px solid #212121;
+  padding-bottom:40px;
 }
 .footerWrapper .footerTextContents ul.copyInfo {
   display: flex;
@@ -324,14 +329,25 @@ span {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .footerWrapper .footerTextContents ul li {
   padding: 8px 0px;
+=======
+.footerWrapper .footerTextContents ul li{
+
+  padding:10px 0px;
+>>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
 }
 
 .footerWrapper .footerTextContents ul li address {
   color: #fff;
   font-size: 20px;
   font-style: normal;
+<<<<<<< HEAD
+=======
+  font-weight: 500;
+
+>>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
 }
 
 .footerWrapper .footerTextContents ul li p {

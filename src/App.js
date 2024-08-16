@@ -10,6 +10,7 @@ import "./App.css";
 
 const App = () => {
   return (
+<<<<<<< HEAD
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainPage />}></Route>
@@ -20,6 +21,15 @@ const App = () => {
         <Route path="/newsEvent/:id" element={<NewsDetails />}></Route>
       </Routes>
     </BrowserRouter>
+=======
+   <BrowserRouter>
+     <Routes>
+        <Route path='/' element={<MainPage/>}></Route>
+        <Route path='/newsEvent' element={<NewsEvents/>}></Route>
+        <Route path='/newsEvent/:id' element={<NewsDetails/>}></Route>
+     </Routes>
+  </BrowserRouter>
+>>>>>>> dac5f2c20b759bc59c81e74bb7e88eb68cd46110
   );
 };
 
