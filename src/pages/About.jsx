@@ -8,7 +8,9 @@ const AboutPage = () => {
   return (
     <div className="AboutPage">
       <Page header={<NavBar />} aside={<AsideNav />} footer={<Footer />}>
-        <span>About</span>
+        <section>
+          <span style={{ color: "#fff", fontSize: "20px" }}>About</span>
+        </section>
       </Page>
     </div>
   );

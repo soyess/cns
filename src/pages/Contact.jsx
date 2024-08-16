@@ -8,7 +8,9 @@ const ContactPage = () => {
   return (
     <div className="contactPage">
       <Page header={<NavBar />} aside={<AsideNav />} footer={<Footer />}>
-        <span>Contact</span>
+        <section>
+          <span style={{ color: "#fff", fontSize: "20px" }}>Contact</span>
+        </section>
       </Page>
     </div>
   );
