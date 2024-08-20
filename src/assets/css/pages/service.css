@@ -16,12 +16,19 @@
 }
 
 .servicePage main {
-  padding: 235px 0 150px 50px;
+  padding: 0 0 150px 50px;
   margin: 0 !important;
   width: 100%;
 }
 
-.servicePage strong {
+#serviceVisualWrap {
+  padding: 235px 0 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#serviceVisualWrap strong {
   font-family: Plus Jakarta Sans;
   font-size: 120px;
   font-weight: 500;
@@ -29,7 +36,6 @@
   text-align: center;
   color: #fff;
   display: block;
-  margin: 0 auto 140px;
 }
 
 .servicePage #serviceContent1 {

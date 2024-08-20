@@ -1,12 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+
 import Page from "../components/Page.jsx";
 import NavBar from "../components/Nav.jsx";
 import AsideNav from "../components/Aside.jsx";
 import Footer from "../components/Footer.jsx";
 
 const ServicePage = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  useEffect(() => {
+    gsap.utils.toArray("section").forEach((section) => {
+      gsap.fromTo(
+        section,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 50%",
+            end: "bottom top",
+            onEnter: () => section.classList.add("is_current"),
+            onLeave: () => section.classList.remove("is_current"),
+            onEnterBack: () => section.classList.add("is_current"),
+            onLeaveBack: () => section.classList.remove("is_current"),
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }, []);
 
+  const [activeIndex, setActiveIndex] = useState(0);
   const services = [
     {
       navTitle: "컨설팅",
@@ -152,7 +176,9 @@ const ServicePage = () => {
   return (
     <div className="servicePage">
       <Page header={<NavBar />} aside={<AsideNav />} footer={<Footer />}>
-        <strong>Services & Offerings</strong>
+        <section id="serviceVisualWrap">
+          <strong>Services & Offerings</strong>
+        </section>
         <section id="serviceContent1">
           <hgroup>
             <p>
