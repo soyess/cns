@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import MainPage from "./pages/Main.jsx";
 import AboutPage from "./pages/About.jsx";
 import ServicePage from "./pages/Service.jsx";
@@ -8,9 +8,20 @@ import NewsEvents from "./pages/NewsEvents.jsx";
 import NewsDetails from "./components/NewsDetails.jsx";
 import "./App.css";
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainPage />}></Route>
         <Route path="/about" element={<AboutPage />}></Route>

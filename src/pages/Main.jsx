@@ -10,16 +10,17 @@ import Footer from "../components/Footer.jsx";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperData from "../json/pages/MainSwiper.json";
+import PartnersData from "../json/pages/MainPartnersList.json";
 import "swiper/css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const MainPage = () => {
   const valueWrapRef = useRef(null);
-  const swiperRef = useRef(null); // 스와이퍼 참조 추가
+  const swiperRef = useRef(null);
   const { ref: inViewRef, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.85,
+    threshold: 0.5,
   });
 
   useEffect(() => {
@@ -47,7 +48,7 @@ const MainPage = () => {
   }, [inView]);
 
   useEffect(() => {
-    gsap.utils.toArray("section").forEach((section) => {
+    gsap.utils.toArray("section, .sectionWrapper").forEach((section) => {
       gsap.fromTo(
         section,
         { opacity: 0, y: 100 },
@@ -56,7 +57,7 @@ const MainPage = () => {
           y: 0,
           scrollTrigger: {
             trigger: section,
-            start: "top 60%",
+            start: "top 50%",
             end: "bottom top",
             onEnter: () => section.classList.add("is_current"),
             onLeave: () => section.classList.remove("is_current"),
@@ -69,13 +70,28 @@ const MainPage = () => {
     });
   }, []);
 
+  const Marquee1 = ({ images }) => (
+    <div className="marquee">
+      {images.map((src, index) => (
+        <img key={index} src={src} alt={`client-${index}`} />
+      ))}
+    </div>
+  );
+  const Marquee2 = ({ images }) => (
+    <div className="marquee marquee2">
+      {images.map((src, index) => (
+        <img key={index} src={src} alt={`client-${index}`} />
+      ))}
+    </div>
+  );
+
   return (
     <div className="mainPage">
       <Page header={<NavBar />} aside={<AsideNav />} footer={<Footer />}>
         <section
-          id="visualWrap"
+          id="mainVisualWrap"
           style={{
-            backgroundImage: `url(${require("../assets/imgs/main/visual.png").default})`,
+            backgroundImage: `url(${require("../assets/imgs/main/main_visual.png").default})`,
           }}
         >
           <div className="visualTitle">
@@ -140,7 +156,7 @@ const MainPage = () => {
           id="mainContent2"
           ref={(node) => {
             valueWrapRef.current = node;
-            inViewRef(node); // 요소가 inView를 감지하도록 설정
+            inViewRef(node);
           }}
         >
           <hgroup>
@@ -202,7 +218,7 @@ const MainPage = () => {
           </div>
         </section>
 
-        <div className="sectionWrapper">
+        <div className="sectionWrapper sectionWrapper1">
           <h2>
             최적화된 <br />
             <mark>맞춤형 서비스</mark>를 <br />
@@ -279,7 +295,7 @@ const MainPage = () => {
           <img src={require("../assets/imgs/main/banner.png").default} alt="" />
         </div>
 
-        <div className="sectionWrapper bgNone">
+        <div className="sectionWrapper sectionWrapper2 bgNone">
           <h2>
             고객과 함께한 <br />
             클라우드 혁신 경험을 <br />
@@ -300,6 +316,7 @@ const MainPage = () => {
                 클라우드로 전환하며 비즈니스 혁신을 이뤄냈습니다.
                 <a className="downloadBtn" href="/" download>
                   사례 다운로드
+                  <img src={require("../assets/imgs/main/report_download.svg").default} alt="" />
                 </a>
               </p>
               <img src={require("../assets/imgs/main/koreanair_img01.png").default} alt="" />
@@ -321,18 +338,92 @@ const MainPage = () => {
                 클라우드로 전환하며 비즈니스 혁신을 이뤄냈습니다.
                 <a className="downloadBtn" href="/" download>
                   사례 다운로드
+                  <img src={require("../assets/imgs/main/report_download.svg").default} alt="" />
                 </a>
               </p>
               <img src={require("../assets/imgs/main/hanwha_img01.png").default} alt="" />
+
+              <Link to="/" className="moreCaseBtn">
+                더 많은 사례 보기 <img src={require("../assets/imgs/main/link_arrow.svg").default} alt="" />
+              </Link>
             </div>
           </section>
         </div>
 
-        <section id="mainContent5">
+        <section id="mainContent8">
           <hgroup>
-            <h2></h2>
-            <p></p>
+            <h2>Clients</h2>
+            <p>
+              다양한 산업 분야의 고객사들과 <br />
+              디지털 혁신의 여정을 함께해왔습니다.
+            </p>
           </hgroup>
+          <div className="marqueeWrap group1">
+            <mark>
+              Distribution services
+              <strong> 유통 서비스</strong>
+            </mark>
+            <Marquee1 images={PartnersData.group1} />
+            <Marquee2 images={PartnersData.group1} />
+          </div>
+          <div className="marqueeWrap group2">
+            <mark>
+              Finance
+              <strong> 금융</strong>
+            </mark>
+            <Marquee1 images={PartnersData.group2} />
+            <Marquee2 images={PartnersData.group2} />
+          </div>
+          <div className="marqueeWrap group3">
+            <mark>
+              Manufacturing · Chemicals · Telecommunications
+              <strong> 제조 · 화학 · 통신</strong>
+            </mark>
+            <Marquee1 images={PartnersData.group3} />
+            <Marquee2 images={PartnersData.group3} />
+          </div>
+          <div className="marqueeWrap group4">
+            <mark>
+              Public Institutions
+              <strong> 공공</strong>
+            </mark>
+            <Marquee1 images={PartnersData.group4} />
+            <Marquee2 images={PartnersData.group4} />
+          </div>
+        </section>
+        <section id="mainContent9">
+          <hgroup>
+            <p>더 궁금한 사항이 있으신가요?</p>
+            <h2>
+              LG CNS Cloud 전문가에게 직접 문의해보세요
+              <Link to="/" className="inquiryBtn">
+                문의하기 <img src={require("../assets/imgs/main/link_arrow.svg").default} alt="" />
+              </Link>
+            </h2>
+          </hgroup>
+          <div>
+            <strong>CONTACT US</strong>
+            <img src={require("../assets/imgs/main/contact.png").default} alt="" />
+
+            <i className="contact_line1 horizontal"></i>
+            <i className="contact_line2 horizontal"></i>
+            <i className="contact_line3 horizontal"></i>
+            <i className="contact_line4 horizontal"></i>
+            <i className="contact_line5 vertical"></i>
+            <i className="contact_line6 vertical"></i>
+            <svg className="contact_angle1" width="242" height="61" viewBox="0 0 242 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M241.5 1H21L11 11L1 21V61" stroke="#535353" />
+            </svg>
+            <svg className="contact_angle2" width="244" height="61" viewBox="0 0 244 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M-9.53674e-06 1H222.792L232.896 11L243 21V61" stroke="#535353" />
+            </svg>
+            <svg className="contact_angle3" width="244" height="61" viewBox="0 0 244 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M244 60H21.2079L11.104 50L1 40V0" stroke="#535353" />
+            </svg>
+            <svg className="contact_angle4" width="244" height="61" viewBox="0 0 244 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M-9.53674e-06 60H222.792L232.896 50L243 40V0" stroke="#535353" />
+            </svg>
+          </div>
         </section>
       </Page>
     </div>

@@ -1,0 +1,96 @@
+.contactPage {
+  margin: 0 auto;
+  background-color: #101010;
+  padding: 0px 0px 0px 100px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactPage .page {
+  width: 100%;
+}
+
+.contactPage * {
+  box-sizing: border-box;
+}
+
+.contactPage main {
+  padding: 120px 0 150px 50px;
+  margin: 0 !important;
+  width: 100%;
+}
+
+.contactPage main .map {
+  width: 100%;
+}
+
+.contactPage section {
+  margin-top: 50px;
+  display: flex;
+}
+
+.contactPage section .left {
+  width: 170px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  color: #fff;
+}
+.contactPage section .right {
+  width: calc(100% - 170px);
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.contactPage section .right p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: left;
+  color: #ffffff;
+}
+
+.contactPage section .right sub {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: left;
+  opacity: 0.6;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.contactPage section .right a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: left;
+  color: #cb3a74;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  width: fit-content;
+}
+
+.contactPage section .right a img {
+  margin-right: 6px;
+}
+
+.contactPage section .right .contactBanner {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.contactPage section .right strong {
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: right;
+  color: #191919;
+  position: absolute;
+  top: 0;
+  right: 50px;
+}

@@ -1,0 +1,32 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.9">
+<mask id="mask0_2027_6087" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
+<rect width="40" height="40" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_2027_6087)">
+<path d="M11.5547 10.2188V15.716" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.35156 11.9844V13.9419" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.14844 11.3594V14.5699" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.94531 12.4453V13.4847" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.7031 11.9844V13.9419" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.9062 11.3594V14.5699" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.1094 12.4453V13.4847" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.5859 12.1094H35.7017C36.8369 12.1094 37.7509 13.0217 37.7509 14.142V25.9737C37.7509 27.065 36.8777 27.9658 35.7774 28.0063L25.7994 28.116" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.63281 21.5078V25.9021C7.63281 27.0281 8.55261 27.9347 9.68197 27.9347H19.6716L25.7842 33.7553" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.8305 15.9297H24.2891C23.7972 15.9297 23.3984 16.3252 23.3984 16.8132V18.4473C23.3984 18.9353 23.7972 19.3308 24.2891 19.3308H24.8305C25.3224 19.3308 25.7212 18.9353 25.7212 18.4473V16.8132C25.7212 16.3252 25.3224 15.9297 24.8305 15.9297Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25.6953 21.3281V24.7235" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.6899 21.3594H22.1485C21.6566 21.3594 21.2578 21.7549 21.2578 22.2429V23.877C21.2578 24.3649 21.6566 24.7605 22.1485 24.7605H22.6899C23.1818 24.7605 23.5806 24.3649 23.5806 23.877V22.2429C23.5806 21.7549 23.1818 21.3594 22.6899 21.3594Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.5493 21.3594H32.0079C31.516 21.3594 31.1172 21.7549 31.1172 22.2429V23.877C31.1172 24.3649 31.516 24.7605 32.0079 24.7605H32.5493C33.0412 24.7605 33.44 24.3649 33.44 23.877V22.2429C33.44 21.7549 33.0412 21.3594 32.5493 21.3594Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.1196 21.3594H13.5782C13.0863 21.3594 12.6875 21.7549 12.6875 22.2429V23.877C12.6875 24.3649 13.0863 24.7605 13.5782 24.7605H14.1196C14.6115 24.7605 15.0103 24.3649 15.0103 23.877V22.2429C15.0103 21.7549 14.6115 21.3594 14.1196 21.3594Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.0234 21.3281V24.7235" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.1875 21.3281V24.7235" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M33.4375 15.9297V19.3308" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27.3516 15.9297V19.3308" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30.6196 15.9297H30.0782C29.5863 15.9297 29.1875 16.3252 29.1875 16.8132V18.4473C29.1875 18.9353 29.5863 19.3308 30.0782 19.3308H30.6196C31.1115 19.3308 31.5103 18.9353 31.5103 18.4473V16.8132C31.5103 16.3252 31.1115 15.9297 30.6196 15.9297Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28.9453 21.3281V24.7235" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35.3281 21.3281V24.7235" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27.3516 21.3281V24.7235" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.5747 6.25H3.48415C2.80255 6.25 2.25 6.79808 2.25 7.47417V18.4744C2.25 19.1505 2.80255 19.6985 3.48415 19.6985H19.5747C20.2563 19.6985 20.8089 19.1505 20.8089 18.4744V7.47417C20.8089 6.79808 20.2563 6.25 19.5747 6.25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>

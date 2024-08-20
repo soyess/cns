@@ -2,6 +2,9 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import "./assets/css/pages/main.css";
+@import "./assets/css/pages/about.css";
+@import "./assets/css/pages/service.css";
+@import "./assets/css/pages/contact.css";
 @import "./assets/css/pages/newsEvent.css";
 @import "./assets/css/newsDetails.css";
 
@@ -95,7 +98,7 @@ mark {
 /* Nav */
 
 .navBar {
-  width: 100%;
+  width: calc(100% - 100px);
   height: 100px;
   background-color: transparent;
   margin: 0 auto;

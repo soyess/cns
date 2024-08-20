@@ -42,11 +42,22 @@ module.exports = {
         //  exclude: /node_modules/,
       },
       {
-        test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
+        test: /\.(jpg|jpeg|gif|png|svg|ico|mov|mp4)$/i,
         loader: "file-loader",
         include: [path.resolve(__dirname, "./src/assets/imgs")],
         options: { name: "[name].[ext]" },
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(mp4|ogg)$/, // 로더를 적용할 파일 유형
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          // 해당 파일에 적용할 로더의 이름
+          loader: "file-loader",
+          options: {
+            name: "assets/media/[name].[ext]?[hash]",
+          },
+        },
       },
     ],
   },

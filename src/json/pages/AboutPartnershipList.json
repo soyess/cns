@@ -1,0 +1,140 @@
+{
+  "group1": [
+    {
+      "title": "AWS Managed Service Provider (‘18.03)",
+      "image": "../assets/imgs/about/partnership/group1/group1_01.png"
+    },
+    {
+      "title": "Security Consulting Competency (‘20.12)",
+      "image": "../assets/imgs/about/partnership/group1/group1_02.png"
+    },
+    {
+      "title": "Migration Consulting Competency (‘20.06)",
+      "image": "../assets/imgs/about/partnership/group1/group1_03.png"
+    },
+    {
+      "title": "AWS Premier Tier Services (‘22.05)",
+      "image": "../assets/imgs/about/partnership/group1/group1_04.png"
+    },
+    {
+      "title": "AWS DevOps Competency (‘22.12)",
+      "image": "../assets/imgs/about/partnership/group1/group1_05.png"
+    },
+    {
+      "title": "Amazon EKS Service Delivery (‘22.06)",
+      "image": "../assets/imgs/about/partnership/group1/group1_06.png"
+    },
+    {
+      "title": "AWS Public Sector Partner (‘22)",
+      "image": "../assets/imgs/about/partnership/group1/group1_07.png"
+    },
+    {
+      "title": "APN Immersion Days (‘22)",
+      "image": "../assets/imgs/about/partnership/group1/group1_08.png"
+    },
+    {
+      "title": "AWS Certification (‘23.03)",
+      "image": "../assets/imgs/about/partnership/group1/group1_09.png"
+    },
+    {
+      "title": "AWS Lamba Service Delivery (‘23.10)",
+      "image": "../assets/imgs/about/partnership/group1/group1_10.png"
+    },
+    {
+      "title": "amazon Direct Connect Service Delivery (‘23.11)",
+      "image": "../assets/imgs/about/partnership/group1/group1_11.png"
+    },
+    {
+      "title": "amazon Redshift Delivery (‘23.11)",
+      "image": "../assets/imgs/about/partnership/group1/group1_12.png"
+    },
+    {
+      "title": "Amazon Connect Delivery (‘23.11)",
+      "image": "../assets/imgs/about/partnership/group1/group1_13.png"
+    },
+    {
+      "title": "AWS Well-Architected Partner Program (‘23.10)",
+      "image": "../assets/imgs/about/partnership/group1/group1_14.png"
+    },
+    {
+      "title": "국내최초 Generative AI Services Competency (‘24.06)",
+      "image": "../assets/imgs/about/partnership/group1/group1_15.png"
+    },
+    {
+      "title": "AWS Cloudformation Delivery (‘24.06)",
+      "image": "../assets/imgs/about/partnership/group1/group1_16.png"
+    },
+    {
+      "title": "amazon CloudFront Delivery (‘24.05)",
+      "image": "../assets/imgs/about/partnership/group1/group1_17.png"
+    },
+    {
+      "title": "AWS Solution Provider Program",
+      "image": "../assets/imgs/about/partnership/group1/group1_18.png"
+    },
+    {
+      "title": "Amazon RDS",
+      "image": "../assets/imgs/about/partnership/group1/group1_19.png"
+    }
+  ],
+  "group2": [
+    {
+      "title": "GCP Premier Partner (‘21.04)",
+      "image": "../assets/imgs/about/partnership/group2/group2_01.png"
+    },
+    {
+      "title": "국내최초 ML Specialization (‘21.07)",
+      "image": "../assets/imgs/about/partnership/group2/group2_02.png"
+    },
+    {
+      "title": "Infrastructure Specialization (’22.02)",
+      "image": "../assets/imgs/about/partnership/group2/group2_03.png"
+    },
+    {
+      "title": "Cloud Migration Specialization (’22.02)",
+      "image": "../assets/imgs/about/partnership/group2/group2_04.png"
+    },
+    {
+      "title": "Data Analytics Specialization (’23.11)",
+      "image": "../assets/imgs/about/partnership/group2/group2_05.png"
+    },
+    {
+      "title": "MSP Partner (’23 갱신)",
+      "image": "../assets/imgs/about/partnership/group2/group2_06.png"
+    }
+  ],
+  "group3": [
+    {
+      "title": "Azure Expert MSP (‘24.06 갱신)",
+      "image": "../assets/imgs/about/partnership/group3/group3_01.png"
+    },
+    {
+      "title": "Microsoft Solution Partners (총 6개 영역 중 5개 획득)",
+      "image": "../assets/imgs/about/partnership/group3/group3_02.png"
+    },
+    {
+      "title": "",
+      "image": "../assets/imgs/about/partnership/group3/group3_03.png"
+    },
+    {
+      "title": "",
+      "image": "../assets/imgs/about/partnership/group3/group3_04.png"
+    },
+    {
+      "title": "",
+      "image": "../assets/imgs/about/partnership/group3/group3_05.png"
+    },
+    {
+      "title": "",
+      "image": "../assets/imgs/about/partnership/group3/group3_06.png"
+    },
+    {
+      "title": "Gold 파트너 인증 6건 (’22 갱신)",
+      "image": "../assets/imgs/about/partnership/group3/group3_07.png"
+    },
+    {
+      "title": "Gold 파트너 인증 6건 (’22 갱신)",
+      "image": "../assets/imgs/about/partnership/group3/group3_08.png"
+    }
+  ]
+}
