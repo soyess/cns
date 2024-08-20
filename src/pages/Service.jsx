@@ -7,6 +7,9 @@ import AsideNav from "../components/Aside.jsx";
 import Footer from "../components/Footer.jsx";
 
 const ServicePage = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const rightContentRef = useRef(null);
+
   useEffect(() => {
     gsap.utils.toArray("section").forEach((section) => {
       gsap.fromTo(
@@ -30,7 +33,6 @@ const ServicePage = () => {
     });
   }, []);
 
-  const [activeIndex, setActiveIndex] = useState(0);
   const services = [
     {
       navTitle: "컨설팅",
@@ -173,6 +175,12 @@ const ServicePage = () => {
     setActiveIndex(index);
   };
 
+  useEffect(() => {
+    if (rightContentRef.current) {
+      gsap.fromTo(rightContentRef.current, { opacity: 0 }, { opacity: 1, duration: 0.4 });
+    }
+  }, [activeIndex]);
+
   return (
     <div className="servicePage">
       <Page header={<NavBar />} aside={<AsideNav />} footer={<Footer />}>
@@ -208,7 +216,7 @@ const ServicePage = () => {
               </li>
             ))}
           </ul>
-          <div className="right">
+          <div className="right" ref={rightContentRef}>
             <span className="title">{services[activeIndex].title}</span>
             <p className="description">{services[activeIndex].description}</p>
             <img src={services[activeIndex].image} alt="" />
