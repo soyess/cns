@@ -74,7 +74,7 @@
   margin-bottom: 20px;
   stroke-dasharray: 500;
   stroke-dashoffset: -290;
-  animation: visual_svg 0.35s 1.75s linear forwards;
+  animation: visual_svg 0.255s 1.75s linear forwards;
 }
 
 #mainVisualWrap .visualTitle svg:last-child {
@@ -91,21 +91,25 @@
   }
 }
 
-#mainVisualWrap .visualTitle strong {
+#mainVisualWrap .visualTitle span {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 120px;
   font-weight: 500;
-  line-height: 120px;
+  line-height: 1;
   letter-spacing: -0.02em;
   color: #ffffff;
   display: block;
   margin-bottom: 50px;
 }
 
+#mainVisualWrap .visualTitle span strong {
+  font-weight: 700;
+}
+
 #mainVisualWrap .visualTitle p {
   font-size: 18px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 1.65;
   letter-spacing: -0.02em;
   text-align: center;
   color: #f3f3f3;
@@ -227,7 +231,7 @@
 #mainContent1 .partnersWrap ul li p {
   font-size: 15px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.4;
   color: #777777;
 }
 
@@ -264,6 +268,7 @@
   border-bottom: 1px solid #343434;
   height: 220px;
   display: flex;
+  align-items: flex-end;
 }
 #mainContent2 .valueWrap ul li * {
   height: 100%;
@@ -274,7 +279,7 @@
   font-family: "Plus Jakarta Sans";
   font-size: 200px;
   font-weight: 600;
-  line-height: 252px;
+  line-height: 1;
   letter-spacing: -0.08em;
   text-align: right;
   color: #303030;
@@ -389,27 +394,45 @@
 
 .sectionWrapper {
   width: 100%;
-  margin-left: 45px;
-  border-radius: 20px;
-  background: #18191a;
   display: flex;
   flex-direction: column;
   padding: 185px 0 200px;
 }
 
-.sectionWrapper.bgNone {
+.sectionWrapper1 {
+  margin-left: 45px;
+  width: calc(100% - 45px);
+  background: #18191a;
+  border-radius: 20px 0 0 20px;
+}
+
+.sectionWrapper2 {
+  padding-left: 290px;
+  padding-right: 45px;
   background: none;
 }
 
 .sectionWrapper > h2 {
-  margin-left: 240px;
   font-family: Pretendard;
-  font-size: 48px;
   font-weight: 600;
-  line-height: 60px;
+  line-height: 1.25;
   letter-spacing: -0.02em;
   text-align: left;
   color: #f1efe9;
+}
+
+.sectionWrapper2 {
+  padding-left: 50px;
+  padding-right: 50px;
+  background: none;
+}
+
+.sectionWrapper1 > h2 {
+  margin-left: 240px;
+  font-size: 48px;
+}
+.sectionWrapper2 > h2 {
+  font-size: 38px;
 }
 
 .sectionWrapper > h2 mark {
@@ -420,6 +443,7 @@
   color: #f1efe9;
   display: flex;
   flex-direction: column;
+  padding-right: 30px;
 }
 .sectionWrapper section hgroup sub {
   font-size: 17px;
@@ -470,7 +494,7 @@
   font-family: "Plus Jakarta Sans";
   font-size: 20px;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 1.4;
   letter-spacing: -0.02em;
 }
 
@@ -479,6 +503,7 @@
   font-weight: 400;
   line-height: 1.2;
   text-align: left;
+  margin-top: 6px;
 }
 
 #mainContent4 ul li img {
@@ -497,6 +522,21 @@
   align-items: center;
   justify-content: center;
   margin-top: 60px;
+  position: relative;
+}
+
+#mainContent5 ul img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#mainContent5 ul img.bg_mo {
+  display: none;
 }
 
 #mainContent5 ul li {
@@ -504,14 +544,17 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
+  white-space: nowrap;
   text-align: left;
-  padding: 0 20px;
   color: #f1efe9;
   background: #18191a;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 25%;
   max-width: 300px;
+  position: relative;
+  z-index: 1;
 }
 
 #mainContent5 ul li::after {
@@ -538,24 +581,21 @@
   /* mix-blend-mode: hard-light; */
 }
 
-.sectionWrapper.bgNone h2 {
+.sectionWrapper2 h2 {
   padding-bottom: 100px;
 }
-.sectionWrapper.bgNone hgroup {
-  margin-left: 240px;
-}
 
-.sectionWrapper.bgNone h2,
-.sectionWrapper.bgNone hgroup {
+.sectionWrapper2 h2,
+.sectionWrapper2 hgroup {
   width: 400px;
   border-right: 1px solid #343434;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
-.sectionWrapper.bgNone hgroup sub {
+.sectionWrapper2 hgroup sub {
   color: #696969;
 }
-.sectionWrapper.bgNone hgroup img {
+.sectionWrapper2 hgroup img {
   width: fit-content;
   height: 50px;
   margin-top: 10px;
@@ -626,6 +666,10 @@
   margin-left: 6px;
 }
 
+#mainContent8 {
+  padding: 0 0 180px;
+}
+
 #mainContent8 hgroup {
   display: flex;
   align-items: flex-end;
@@ -668,6 +712,7 @@
   position: absolute;
   right: 20px;
   top: 16px;
+  z-index: 1;
 }
 
 .marqueeWrap mark strong {
@@ -675,6 +720,7 @@
   font-weight: 600;
   text-align: right;
   color: #fff;
+  margin-left: 5px;
 }
 .marquee {
   position: absolute;
@@ -739,7 +785,7 @@
 #mainContent9 hgroup h2 {
   font-size: 30px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.4;
   text-align: left;
   margin-top: 10px;
 }
@@ -771,7 +817,6 @@
 #mainContent9 div img {
   width: 100%;
   max-width: 1660px;
-  height: 400px;
   border-radius: 20px;
   opacity: 0.6;
   object-fit: cover;
@@ -911,4 +956,727 @@
 }
 #mainContent9.is_current .contact_angle4 {
   animation: contact_svg4 0.35s 1.25s linear forwards;
+}
+
+@media (max-width: 1700px) {
+  .sectionWrapper2 section > div {
+    width: fit-content;
+  }
+
+  #mainContent3 hgroup {
+    width: 1050px;
+  }
+}
+@media (max-width: 1600px) {
+  #mainVisualWrap .visualTitle span {
+    font-size: 7.5vw;
+  }
+  #mainContent1 .partnersWrap {
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  #mainContent1 hgroup,
+  #mainContent3 hgroup,
+  #mainContent9 hgroup,
+  .sectionWrapper > h2 {
+    margin-left: 50px;
+  }
+
+  .sectionWrapper2 > h2,
+  .sectionWrapper2 hgroup {
+    margin-left: 0;
+  }
+
+  #mainContent1 .partnersWrap,
+  #mainContent2 hgroup,
+  #mainContent4,
+  #mainContent5 hgroup {
+    padding-left: 50px;
+  }
+
+  #mainContent3 hgroup,
+  #mainContent9 hgroup {
+    width: 1050px;
+  }
+
+  #mainContent9 div strong {
+    font-size: 13vw;
+  }
+
+  #mainContent2 .valueWrap ul strong::before {
+    width: 160px;
+  }
+  #mainContent2 .valueWrap ul li {
+    height: 160px;
+  }
+
+  #mainContent2 .valueWrap ul strong {
+    width: calc(100% - 320px);
+    font-size: 140px;
+  }
+  #mainContent2 .valueWrap ul p {
+    width: 320px;
+    padding: 20px;
+  }
+
+  #mainContent1 .partnersWrap ul li,
+  #mainContent1 .partnersWrap ul li:last-child {
+    width: 33.3333%;
+  }
+}
+
+@media (max-width: 1500px) {
+  #mainContent4 hgroup {
+    width: calc(100% - 560px);
+  }
+  #mainContent4 ul {
+    width: 600px;
+    padding-right: 30px;
+  }
+  #mainContent4 ul li {
+    width: 50%;
+  }
+}
+@media (max-width: 1400px) {
+  .sectionWrapper2 h2 {
+    width: 100%;
+    border-right: none;
+  }
+  .sectionWrapper2 hgroup {
+    width: 250px;
+  }
+
+  .sectionWrapper2 section > div {
+    width: calc(100% - 250px);
+  }
+
+  #mainContent6 > div > img,
+  #mainContent7 > div > img {
+    width: 100%;
+  }
+
+  #mainContent8 hgroup h2 {
+    font-size: 160px;
+  }
+}
+@media (max-width: 1300px) {
+  #mainContent3 hgroup {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 4%;
+  }
+
+  #mainContent9 hgroup {
+    width: 100%;
+  }
+
+  .mainPage hgroup a {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .mainPage hgroup p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1200px) {
+  #mainContent2 .valueWrap ul strong::before {
+    display: none;
+  }
+
+  #mainContent8 hgroup h2 {
+    font-size: 140px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header,
+  footer,
+  .page > aside {
+    display: none;
+  }
+
+  .mainPage {
+    padding: 0;
+  }
+
+  #mainVisualWrap .visualTitle {
+    width: 92%;
+  }
+  #mainVisualWrap .visualTitle span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 70px;
+  }
+  #mainVisualWrap .visualTitle span strong {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+
+  #mainContent1 hgroup,
+  #mainContent3 hgroup,
+  .sectionWrapper1 {
+    margin-left: 4%;
+  }
+
+  #mainContent9 hgroup {
+    margin: 0;
+    padding: 0 4% 50px;
+  }
+
+  .sectionWrapper1 > h2 {
+    margin-left: 4%;
+  }
+
+  .bannerWrap {
+    margin: 90px 0 50px 4%;
+  }
+
+  #mainContent1 .partnersWrap,
+  #mainContent2 hgroup,
+  #mainContent5 hgroup {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  #mainContent3 .swiperWrap .swiper-wrapper {
+    padding-left: 10px;
+  }
+
+  #mainContent1 {
+    padding: 60px 0 0;
+  }
+
+  #mainContent1 .videoWrap {
+    height: fit-content;
+    margin: 40px 0;
+  }
+
+  #mainContent1 hgroup h2,
+  #mainContent3 hgroup h2 {
+    font-size: 30px;
+  }
+  .mainPage hgroup p {
+    font-size: 16px;
+  }
+
+  #mainContent1 .partnersWrap ul li {
+    height: 200px;
+    padding: 20px;
+  }
+  #mainContent1 .partnersWrap ul li strong {
+    font-size: 16px;
+  }
+  #mainContent1 .partnersWrap ul li p {
+    font-size: 12px;
+  }
+  #mainContent1 .partnersWrap ul li img {
+    height: 56px;
+    margin: auto 0 0 0;
+  }
+
+  #mainContent2 {
+    padding: 150px 0 100px;
+  }
+
+  #mainContent2 hgroup h2 {
+    font-size: 48px;
+  }
+
+  #mainContent2 .valueWrap {
+    width: 100%;
+    padding: 0 4%;
+    margin-top: 80px;
+  }
+
+  #mainContent2 .valueWrap ul li {
+    height: 130px;
+  }
+  #mainContent2 .valueWrap ul strong {
+    width: calc(100% - 320px);
+    font-size: 100px;
+  }
+
+  #mainContent3 {
+    padding: 0 0 100px;
+  }
+
+  #mainContent3 .swiper-slide {
+    padding: 20px;
+  }
+
+  #mainContent3 .swiper-slide {
+    height: 400px;
+  }
+  #mainContent3 .swiper-slide img {
+    height: 140px;
+  }
+  #mainContent3 .swiper-slide strong {
+    font-size: 20px;
+  }
+  #mainContent3 .swiper-slide sub {
+    font-size: 13px;
+  }
+  #mainContent3 .swiper-slide span {
+    font-size: 17px;
+  }
+  #mainContent3 .swiper-slide p {
+    font-size: 14px;
+  }
+
+  .sectionWrapper1 {
+    padding: 50px 0;
+  }
+
+  .sectionWrapper > h2 {
+    font-size: 36px;
+  }
+
+  .sectionWrapper2 {
+    padding: 0 4% 0 30px;
+    margin-left: 4%;
+    width: 96%;
+    border-left: 1px solid #343434;
+  }
+
+  #mainContent4 {
+    margin: 100px 0 80px;
+    padding: 0 4%;
+    flex-direction: column;
+  }
+
+  .sectionWrapper1 {
+    width: calc(96%);
+  }
+
+  #mainContent4 hgroup {
+    width: 100%;
+  }
+
+  .sectionWrapper section hgroup sub {
+    font-size: 15px;
+  }
+
+  .sectionWrapper section hgroup span {
+    font-size: 25px;
+  }
+
+  .sectionWrapper section hgroup p {
+    font-size: 15px;
+  }
+
+  #mainContent4 ul {
+    width: 100%;
+    margin-top: 50px;
+    border-top: 1px solid #737372;
+    border-bottom: 1px solid #737372;
+    padding: 10px 0;
+  }
+
+  #mainContent4 ul li {
+    width: 33.3333%;
+    height: 180px;
+    position: relative;
+    padding: 10px 20px;
+  }
+
+  #mainContent4 ul li:after {
+    content: "";
+    height: 1px;
+    width: calc(100% + 1px);
+    display: block;
+    background: #3a3838;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+  }
+  #mainContent4 ul li img {
+    margin-left: auto;
+    width: 36px;
+    width: 32px;
+  }
+
+  #mainContent4 ul li p {
+    font-size: 17px;
+    font-size: 14px;
+  }
+
+  #mainContent4 ul li span {
+    font-size: 13px;
+    font-size: 11px;
+  }
+
+  #mainContent5 ul {
+    height: 200px;
+  }
+
+  .bannerWrap img {
+    height: 330px;
+  }
+
+  .sectionWrapper2 h2 {
+    padding-bottom: 80px;
+  }
+
+  #mainContent6,
+  #mainContent7 {
+    flex-direction: column;
+  }
+
+  .sectionWrapper section > hgroup {
+    width: 100%;
+    padding-right: 0;
+    border-right: none;
+  }
+  .sectionWrapper2 section > div {
+    width: 100%;
+    padding: 0;
+  }
+
+  .sectionWrapper2 hgroup img {
+    height: 36px;
+  }
+
+  .sectionWrapper2 section > div span {
+    margin-top: 30px;
+    display: block;
+    font-size: 24px;
+  }
+
+  .sectionWrapper2 section > div p {
+    font-size: 15px;
+    margin: 8px 0 20px;
+  }
+
+  .moreCaseBtn {
+    font-size: 23px;
+  }
+
+  #mainContent8 hgroup {
+    padding: 0 4%;
+  }
+
+  #mainContent8 hgroup h2 {
+    font-size: 100px;
+  }
+
+  #mainContent8 {
+    padding: 50px 0 100px;
+  }
+
+  #mainContent9 {
+    padding: 40px 0 60px;
+  }
+
+  #mainContent9 hgroup h2 {
+    font-size: 26px;
+  }
+
+  #mainContent9 div {
+    padding: 30px 0;
+  }
+  .contact_line2 {
+    top: 10px;
+  }
+  .contact_line3 {
+    bottom: 10px;
+  }
+
+  .contact_angle1 {
+    left: 4%;
+  }
+  .contact_angle2 {
+    right: 4%;
+  }
+  .contact_angle3 {
+    left: 4%;
+  }
+  .contact_angle4 {
+    right: 4%;
+  }
+  .contact_line5 {
+    left: 4%;
+  }
+  .contact_line6 {
+    right: 4%;
+  }
+
+  #mainContent9 div img {
+    min-height: 230px;
+    max-width: calc(92% - 24px);
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #mainVisualWrap {
+    background-position: bottom -200px left -20px;
+    background-size: 190%;
+  }
+
+  @keyframes opening {
+    100% {
+      background-position: bottom 0px left -20px;
+    }
+  }
+
+  #mainVisualWrap .visualTitle span {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  #mainVisualWrap .visualTitle span strong {
+    font-size: 28px;
+  }
+
+  #mainVisualWrap .visualScroll {
+    font-size: 11px;
+  }
+  #mainVisualWrap .visualScroll::before {
+    height: 22px;
+    margin-bottom: 5px;
+  }
+
+  #mainVisualWrap .visualTitle p {
+    font-size: 13px;
+  }
+
+  #mainContent1 hgroup h2,
+  #mainContent3 hgroup h2 {
+    font-size: 22px;
+  }
+  .mainPage hgroup p {
+    font-size: 13px;
+  }
+  #mainContent1 .partnersWrap ul li strong {
+    font-size: 16px;
+  }
+  #mainContent1 .partnersWrap ul li p {
+    font-size: 12px;
+  }
+
+  #mainContent1 .partnersWrap ul {
+    flex-wrap: wrap;
+  }
+  #mainContent1 .partnersWrap ul li,
+  #mainContent1 .partnersWrap ul li:last-child {
+    width: 100%;
+    height: fit-content;
+  }
+  #mainContent1 .partnersWrap ul li img {
+    margin: 20px 0 0 0;
+  }
+
+  #mainContent1 hgroup h2,
+  #mainContent3 hgroup h2 {
+    margin-bottom: 16px;
+  }
+
+  #mainContent2 hgroup h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
+  #mainContent2 .valueWrap ul li {
+    height: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 20px 0;
+  }
+
+  #mainContent2 .valueWrap ul strong {
+    border-right: none;
+    text-align: left;
+    justify-content: flex-start;
+    height: fit-content;
+  }
+  #mainContent2 .valueWrap ul p {
+    padding: 0;
+    height: fit-content;
+    margin-top: 10px;
+  }
+
+  .mainPage hgroup a {
+    font-size: 13px;
+  }
+
+  .mainPage hgroup a img {
+    width: 16px;
+  }
+
+  #mainContent3 .swiperWrap {
+    margin-top: 60px;
+  }
+
+  #mainContent3 .swiper-slide {
+    height: 300px;
+  }
+  #mainContent3 .swiper-slide img {
+    height: 100px;
+  }
+  #mainContent3 .swiper-slide strong {
+    font-size: 17px;
+  }
+  #mainContent3 .swiper-slide sub {
+    font-size: 11px;
+  }
+  #mainContent3 .swiper-slide span {
+    font-size: 14px;
+  }
+  #mainContent3 .swiper-slide p {
+    font-size: 12px;
+  }
+
+  .sectionWrapper > h2 {
+    font-size: 26px;
+  }
+
+  .sectionWrapper section hgroup sub {
+    font-size: 13px;
+  }
+
+  .sectionWrapper section hgroup span {
+    margin: 8px 0 12px;
+    font-size: 22px;
+  }
+
+  .sectionWrapper section hgroup p {
+    font-size: 13px;
+  }
+
+  #mainContent4 ul li {
+    width: 50%;
+    height: 150px;
+    position: relative;
+    padding: 10px 20px;
+  }
+
+  #mainContent4 ul li img {
+    margin-left: auto;
+    width: 32px;
+  }
+
+  #mainContent4 ul li p {
+    font-size: 14px;
+  }
+
+  #mainContent4 ul li span {
+    font-size: 11px;
+  }
+
+  #mainContent5 ul {
+    height: 715px;
+    flex-direction: column;
+    gap: 150px;
+  }
+  #mainContent5 ul li {
+    height: fit-content;
+    width: fit-content;
+  }
+  #mainContent5 ul img.bg_pc {
+    display: none;
+  }
+  #mainContent5 ul img.bg_mo {
+    /* width: 300px; */
+    display: block;
+    object-fit: contain;
+  }
+
+  .bannerWrap img {
+    height: 160px;
+  }
+
+  .sectionWrapper2 section > div span {
+    font-size: 18px;
+  }
+
+  .sectionWrapper2 section > div p {
+    font-size: 13px;
+  }
+
+  .moreCaseBtn {
+    font-size: 20px;
+  }
+
+  #mainContent8 hgroup {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #mainContent8 hgroup h2 {
+    margin-right: 0;
+    font-size: 100px;
+  }
+
+  .mainPage hgroup p {
+    margin-top: 20px;
+  }
+
+  #mainContent8 hgroup p {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .marqueeWrap {
+    height: 260px;
+  }
+
+  .marquee {
+    bottom: 30px;
+  }
+
+  .marquee img {
+    width: 160px;
+    height: 160px;
+    background-color: #1d1d1d;
+    border-radius: 50%;
+  }
+
+  .marqueeWrap mark {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3px;
+    right: 16px;
+  }
+  .marqueeWrap mark,
+  .marqueeWrap mark strong {
+    font-size: 13px;
+  }
+
+  #mainContent9 hgroup h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 425px) {
+  #mainContent1 .partnersWrap ul li img {
+    margin: 20px 0 0 auto;
+  }
+
+  .sectionWrapper2 section > div p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sectionWrapper2 section > div p a {
+    margin-left: 0;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .sectionWrapper2 section > div p a img {
+    width: 16px;
+  }
+}
+
+.br_500 {
+  display: none;
+}
+@media (max-width: 500px) {
+  .br_500 {
+    display: block;
+  }
 }

@@ -57,7 +57,7 @@ const MainPage = () => {
           y: 0,
           scrollTrigger: {
             trigger: section,
-            start: "top 50%",
+            start: "top 70%",
             end: "bottom top",
             onEnter: () => section.classList.add("is_current"),
             onLeave: () => section.classList.remove("is_current"),
@@ -99,7 +99,9 @@ const MainPage = () => {
               <path opacity="0.5" d="M241.5 1H21L11 11L1 21V61" stroke="#B4B4B4" />
             </svg>
 
-            <strong>LG CNS Cloud service</strong>
+            <span>
+              <strong>LG CNS</strong> Cloud service
+            </span>
             <p>
               클라우드가 필요한 순간, 언제 어디서나 LG CNS가 있습니다. <br />
               클라우드가 열어갈 더 새롭고 편리해진 비즈니스 세상, 그 처음과 끝을 LG CNS가 함께합니다.
@@ -204,7 +206,40 @@ const MainPage = () => {
             </Link>
           </hgroup>
           <div className="swiperWrap">
-            <Swiper spaceBetween={20} slidesPerView={4} centeredSlides={true} loop={true} ref={swiperRef}>
+            <Swiper
+              spaceBetween={10}
+              slidesPerView={1.5}
+              centeredSlides={false}
+              loop={true}
+              ref={swiperRef}
+              breakpoints={{
+                500: {
+                  slidesPerView: 2.2,
+                  spaceBetween: 10,
+                  centeredSlides: false,
+                },
+                768: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 10,
+                  centeredSlides: false,
+                },
+                1024: {
+                  slidesPerView: 2.8,
+                  spaceBetween: 10,
+                  centeredSlides: true,
+                },
+                1300: {
+                  slidesPerView: 3.3,
+                  spaceBetween: 15,
+                  centeredSlides: true,
+                },
+                1600: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                  centeredSlides: true,
+                },
+              }}
+            >
               {SwiperData.map((item) => (
                 <SwiperSlide key={item.number}>
                   <strong className="type">{item.type}</strong>
@@ -278,11 +313,9 @@ const MainPage = () => {
                 클라우드 운영 시스템 구축 서비스
               </p>
             </hgroup>
-            <ul
-              style={{
-                backgroundImage: `url(${require("../assets/imgs/main/process.svg").default})`,
-              }}
-            >
+            <ul>
+              <img className="bg_pc" src={require("../assets/imgs/main/process.svg").default} alt="" />
+              <img className="bg_mo" src={require("../assets/imgs/main/process_mo.svg").default} alt="" />
               <li>01 운영 및 모니터링</li>
               <li>02 클라우드 Advisory</li>
               <li>03 클라우드 최적화</li>
@@ -395,7 +428,7 @@ const MainPage = () => {
           <hgroup>
             <p>더 궁금한 사항이 있으신가요?</p>
             <h2>
-              LG CNS Cloud 전문가에게 직접 문의해보세요
+              LG CNS Cloud 전문가에게 <br className="br_500" /> 직접 문의해보세요
               <Link to="/" className="inquiryBtn">
                 문의하기 <img src={require("../assets/imgs/main/link_arrow.svg").default} alt="" />
               </Link>
