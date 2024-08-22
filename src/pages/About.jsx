@@ -4,11 +4,152 @@ import { gsap } from "gsap";
 import NavBar from "../components/Nav.jsx";
 import AsideNav from "../components/Aside.jsx";
 import Footer from "../components/Footer.jsx";
-import PartnersShipData from "../json/pages/AboutPartnershipList.json";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
+import "swiper/css/pagination";
+
+const PartnersShipData = {
+  group1: [
+    {
+      title: "AWS Managed Service Provider (‘18.03)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_01.png").default,
+    },
+    {
+      title: "Security Consulting Competency (‘20.12)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_02.png").default,
+    },
+    {
+      title: "Migration Consulting Competency (‘20.06)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_03.png").default,
+    },
+    {
+      title: "AWS Premier Tier Services (‘22.05)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_04.png").default,
+    },
+    {
+      title: "AWS DevOps Competency (‘22.12)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_05.png").default,
+    },
+    {
+      title: "Amazon EKS Service Delivery (‘22.06)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_06.png").default,
+    },
+    {
+      title: "AWS Public Sector Partner (‘22)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_07.png").default,
+    },
+    {
+      title: "APN Immersion Days (‘22)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_08.png").default,
+    },
+    {
+      title: "AWS Certification (‘23.03)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_09.png").default,
+    },
+    {
+      title: "AWS Lamba Service Delivery (‘23.10)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_10.png").default,
+    },
+    {
+      title: "amazon Direct Connect Service Delivery (‘23.11)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_11.png").default,
+    },
+    {
+      title: "amazon Redshift Delivery (‘23.11)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_12.png").default,
+    },
+    {
+      title: "Amazon Connect Delivery (‘23.11)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_13.png").default,
+    },
+    {
+      title: "AWS Well-Architected Partner Program (‘23.10)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_14.png").default,
+    },
+    {
+      title: "국내최초 Generative AI Services Competency (‘24.06)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_15.png").default,
+    },
+    {
+      title: "AWS Cloudformation Delivery (‘24.06)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_16.png").default,
+    },
+    {
+      title: "amazon CloudFront Delivery (‘24.05)",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_17.png").default,
+    },
+    {
+      title: "AWS Solution Provider Program",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_18.png").default,
+    },
+    {
+      title: "Amazon RDS",
+      image: require("../assets/imgs/about/partnership/group1/partnership_group1_19.png").default,
+    },
+  ],
+  group2: [
+    {
+      title: "GCP Premier Partner (‘21.04)",
+      image: "../assets/imgs/about/partnership/group2/group2_01.png",
+    },
+    {
+      title: "국내최초 ML Specialization (‘21.07)",
+      image: "../assets/imgs/about/partnership/group2/group2_02.png",
+    },
+    {
+      title: "Infrastructure Specialization (’22.02)",
+      image: "../assets/imgs/about/partnership/group2/group2_03.png",
+    },
+    {
+      title: "Cloud Migration Specialization (’22.02)",
+      image: "../assets/imgs/about/partnership/group2/group2_04.png",
+    },
+    {
+      title: "Data Analytics Specialization (’23.11)",
+      image: "../assets/imgs/about/partnership/group2/group2_05.png",
+    },
+    {
+      title: "MSP Partner (’23 갱신)",
+      image: "../assets/imgs/about/partnership/group2/group2_06.png",
+    },
+  ],
+  group3: [
+    {
+      title: "Azure Expert MSP (‘24.06 갱신)",
+      image: "../assets/imgs/about/partnership/group3/group3_01.png",
+    },
+    {
+      title: "Microsoft Solution Partners (총 6개 영역 중 5개 획득)",
+      image: "../assets/imgs/about/partnership/group3/group3_02.png",
+    },
+    {
+      title: "",
+      image: "../assets/imgs/about/partnership/group3/group3_03.png",
+    },
+    {
+      title: "",
+      image: "../assets/imgs/about/partnership/group3/group3_04.png",
+    },
+    {
+      title: "",
+      image: "../assets/imgs/about/partnership/group3/group3_05.png",
+    },
+    {
+      title: "",
+      image: "../assets/imgs/about/partnership/group3/group3_06.png",
+    },
+    {
+      title: "Gold 파트너 인증 6건 (’22 갱신)",
+      image: "../assets/imgs/about/partnership/group3/group3_07.png",
+    },
+    {
+      title: "Gold 파트너 인증 6건 (’22 갱신)",
+      image: "../assets/imgs/about/partnership/group3/group3_08.png",
+    },
+  ],
+};
 
 const AboutPage = () => {
   const circleRef = useRef(null);
@@ -46,6 +187,12 @@ const AboutPage = () => {
     });
   }, []);
 
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const keywordSlideChange = (swiper) => {
+    setActiveIndex(swiper.realIndex);
+  };
+
   return (
     <div className="aboutPage">
       <Page header={<NavBar />} aside={<AsideNav />} footer={<Footer />}>
@@ -65,8 +212,51 @@ const AboutPage = () => {
           </p>
         </section>
 
-        <section id="aboutContent1">
-          <img src={require("../assets/imgs/about/about_video.png").default} alt="" />
+        <section
+          id="aboutContent1"
+          style={{
+            backgroundImage: `url(${require("../assets/imgs/about/about_scale.png").default})`,
+          }}
+        >
+          <div className="keywordWrap">
+            <p className="left">
+              <i className={activeIndex === 0 ? "is_active" : ""}></i>
+              <i className={activeIndex === 1 ? "is_active" : ""}></i>
+              <i className={activeIndex === 2 ? "is_active" : ""}></i>
+            </p>
+            <Swiper
+              spaceBetween={20}
+              slidesPerView={1}
+              centeredSlides={true}
+              direction={"vertical"}
+              loop={true}
+              speed={800}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay, Pagination]}
+              onSlideChange={keywordSlideChange}
+            >
+              <SwiperSlide>
+                <strong>Future Innovator</strong>
+                <sub>압도적인 기술과 인프라</sub>
+              </SwiperSlide>
+              <SwiperSlide>
+                <strong>Global Tospan Tier</strong>
+                <sub>풍부한 경험과 노하우</sub>
+              </SwiperSlide>
+              <SwiperSlide>
+                <strong>Trusted spanartner</strong>
+                <sub>믿음직한 통합서비스</sub>
+              </SwiperSlide>
+            </Swiper>
+            <p className="right">
+              <i className={activeIndex === 0 ? "is_active" : ""}></i>
+              <i className={activeIndex === 1 ? "is_active" : ""}></i>
+              <i className={activeIndex === 2 ? "is_active" : ""}></i>
+            </p>
+          </div>
         </section>
         <section id="aboutContent2">
           <div className="lettWrap">
@@ -140,7 +330,7 @@ const AboutPage = () => {
           <div className="swiperWrap">
             <Swiper spaceBetween={10} slidesPerView={6.2} speed={800}>
               {PartnersShipData.group1.map((item) => (
-                <SwiperSlide key={item.title}>
+                <SwiperSlide key={item.index}>
                   <div>
                     <img src={item.image} alt={item.title} />
                   </div>
@@ -165,7 +355,7 @@ const AboutPage = () => {
           <div className="swiperWrap">
             <Swiper spaceBetween={10} slidesPerView={6.2} speed={800}>
               {PartnersShipData.group2.map((item) => (
-                <SwiperSlide key={item.title}>
+                <SwiperSlide key={item.index}>
                   <div>
                     <img src={item.image} alt={item.title} />
                   </div>
@@ -183,7 +373,7 @@ const AboutPage = () => {
           <div className="swiperWrap">
             <Swiper spaceBetween={10} slidesPerView={6.2} speed={800}>
               {PartnersShipData.group3.map((item) => (
-                <SwiperSlide key={item.title}>
+                <SwiperSlide key={item.index}>
                   <div>
                     <img src={item.image} alt={item.title} />
                   </div>
@@ -201,7 +391,7 @@ const AboutPage = () => {
         </section>
 
         <section id="aboutContent4">
-          <video src="/assets/video/lgcns_service_offering.mp4" autoplay="true" muted="muted" loop="true" playsinline=""></video>
+          <video src="/assets/video/lgcns_service_offering.mp4" autoplay="true" muted="muted" loop="true" playsInline=""></video>
         </section>
       </Page>
     </div>

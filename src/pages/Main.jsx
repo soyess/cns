@@ -9,8 +9,6 @@ import AsideNav from "../components/Aside.jsx";
 import Footer from "../components/Footer.jsx";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperData from "../json/pages/MainSwiper.json";
-import PartnersData from "../json/pages/MainPartnersList.json";
 import "swiper/css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -77,6 +75,7 @@ const MainPage = () => {
       ))}
     </div>
   );
+
   const Marquee2 = ({ images }) => (
     <div className="marquee marquee2">
       {images.map((src, index) => (
@@ -84,6 +83,117 @@ const MainPage = () => {
       ))}
     </div>
   );
+
+  const SwiperData = [
+    {
+      number: "01",
+      type: "Cloud Consulting",
+      title: "컨설팅",
+      sub: "Cloud Consulting",
+      image: require("../assets/imgs/main/swiper_img01.svg").default,
+    },
+    {
+      number: "02",
+      type: "Cloud Migration / Implementation",
+      title: "전환 및 구축",
+      sub: "Cloud Migration / Implementation",
+      image: require("../assets/imgs/main/swiper_img02.svg").default,
+    },
+    {
+      number: "03",
+      type: "Application Modernization",
+      title: "애플리케이션 현대화",
+      sub: "Application Modernization",
+      image: require("../assets/imgs/main/swiper_img03.svg").default,
+    },
+    {
+      number: "04",
+      type: "Cloud Data / AI",
+      title: "클라우드 Data/AI",
+      sub: "Cloud Data/AI",
+      image: require("../assets/imgs/main/swiper_img04.svg").default,
+    },
+    {
+      number: "05",
+      type: "Cloud Managed Service",
+      title: "운영 및 관리",
+      sub: "Cloud Managed Service",
+      image: require("../assets/imgs/main/swiper_img05.svg").default,
+    },
+  ];
+
+  const PartnersData = {
+    group1: [
+      require("../assets/imgs/main/partners/group1/group1_01.png").default,
+      require("../assets/imgs/main/partners/group1/group1_02.png").default,
+      require("../assets/imgs/main/partners/group1/group1_03.png").default,
+      require("../assets/imgs/main/partners/group1/group1_04.png").default,
+      require("../assets/imgs/main/partners/group1/group1_05.png").default,
+      require("../assets/imgs/main/partners/group1/group1_06.png").default,
+      require("../assets/imgs/main/partners/group1/group1_07.png").default,
+      require("../assets/imgs/main/partners/group1/group1_08.png").default,
+      require("../assets/imgs/main/partners/group1/group1_09.png").default,
+      require("../assets/imgs/main/partners/group1/group1_10.png").default,
+    ],
+    group2: [
+      require("../assets/imgs/main/partners/group2/group2_01.png").default,
+      require("../assets/imgs/main/partners/group2/group2_02.png").default,
+      require("../assets/imgs/main/partners/group2/group2_03.png").default,
+      require("../assets/imgs/main/partners/group2/group2_04.png").default,
+      require("../assets/imgs/main/partners/group2/group2_05.png").default,
+      require("../assets/imgs/main/partners/group2/group2_06.png").default,
+      require("../assets/imgs/main/partners/group2/group2_07.png").default,
+      require("../assets/imgs/main/partners/group2/group2_08.png").default,
+      require("../assets/imgs/main/partners/group2/group2_09.png").default,
+      require("../assets/imgs/main/partners/group2/group2_10.png").default,
+      require("../assets/imgs/main/partners/group2/group2_11.png").default,
+    ],
+    group3: [
+      require("../assets/imgs/main/partners/group3/group3_01.png").default,
+      require("../assets/imgs/main/partners/group3/group3_02.png").default,
+      require("../assets/imgs/main/partners/group3/group3_03.png").default,
+      require("../assets/imgs/main/partners/group3/group3_04.png").default,
+      require("../assets/imgs/main/partners/group3/group3_05.png").default,
+      require("../assets/imgs/main/partners/group3/group3_06.png").default,
+      require("../assets/imgs/main/partners/group3/group3_07.png").default,
+      require("../assets/imgs/main/partners/group3/group3_08.png").default,
+    ],
+    group4: [
+      require("../assets/imgs/main/partners/group4/group4_01.png").default,
+      require("../assets/imgs/main/partners/group4/group4_02.png").default,
+      require("../assets/imgs/main/partners/group4/group4_03.png").default,
+      require("../assets/imgs/main/partners/group4/group4_04.png").default,
+      require("../assets/imgs/main/partners/group4/group4_05.png").default,
+      require("../assets/imgs/main/partners/group4/group4_06.png").default,
+      require("../assets/imgs/main/partners/group4/group4_07.png").default,
+      require("../assets/imgs/main/partners/group4/group4_08.png").default,
+      require("../assets/imgs/main/partners/group4/group4_09.png").default,
+      require("../assets/imgs/main/partners/group4/group4_10.png").default,
+    ],
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scalePoint = (document.getElementById("mainVisualWrap").offsetTop / 3) * 2;
+      const scrollY = window.scrollY;
+
+      const scaleImg = document.querySelector(".scaleImg");
+
+      if (scrollY > scalePoint) {
+        console.log("over");
+        const increaseWidth = Math.min(30 + (scrollY - scalePoint) * 0.08, 300);
+        const increaseOpacity = Math.min(0 + (scrollY - scalePoint) * 0.001, 300);
+        scaleImg.style.width = `${increaseWidth}%`;
+        scaleImg.style.opacity = increaseOpacity;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="mainPage">
@@ -124,9 +234,7 @@ const MainPage = () => {
               탁월한 전문성을 바탕으로 대한민국을 넘어 전 세계 고객들과 만나고 있습니다.
             </p>
           </hgroup>
-          <div className="videoWrap">
-            <img src={require("../assets/imgs/main/video.png").default} alt="" />
-          </div>
+          <img className="scaleImg" src={require("../assets/imgs/main/scale.png").default} alt="" />
           <div className="partnersWrap">
             <ul>
               <li>
@@ -240,8 +348,8 @@ const MainPage = () => {
                 },
               }}
             >
-              {SwiperData.map((item) => (
-                <SwiperSlide key={item.number}>
+              {SwiperData.map((item, index) => (
+                <SwiperSlide key={index}>
                   <strong className="type">{item.type}</strong>
                   <sub className="number">{item.number}</sub>
                   <span className="title">{item.title}</span>
