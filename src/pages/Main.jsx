@@ -14,12 +14,32 @@ import "swiper/css";
 gsap.registerPlugin(ScrollTrigger);
 
 const MainPage = () => {
+  const [isMediaLoaded, setIsMediaLoaded] = useState(false);
+
+  useEffect(() => {
+    if (isMediaLoaded) {
+      window.scrollTo(0, 0);
+    }
+  }, [isMediaLoaded]);
+
+  useEffect(() => {
+    const handleLoad = () => setIsMediaLoaded(true);
+
+    window.addEventListener("load", handleLoad);
+
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
   const valueWrapRef = useRef(null);
   const swiperRef = useRef(null);
   const { ref: inViewRef, inView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     if (inView && valueWrapRef.current) {
@@ -455,10 +475,10 @@ const MainPage = () => {
               <p>
                 600여대 서버, 100여개 시스템 모두를 <br />
                 클라우드로 전환하며 비즈니스 혁신을 이뤄냈습니다.
-                <a className="downloadBtn" href="/" download>
+                <Link to="/" className="directBtn">
                   사례 다운로드
                   <img src={require("../assets/imgs/main/report_download.svg").default} alt="" />
-                </a>
+                </Link>
               </p>
               <img src={require("../assets/imgs/main/koreanair_img01.png").default} alt="" />
             </div>
@@ -477,10 +497,10 @@ const MainPage = () => {
               <p>
                 600여대 서버, 100여개 시스템 모두를 <br />
                 클라우드로 전환하며 비즈니스 혁신을 이뤄냈습니다.
-                <a className="downloadBtn" href="/" download>
+                <Link to="/" className="directBtn">
                   사례 다운로드
                   <img src={require("../assets/imgs/main/report_download.svg").default} alt="" />
-                </a>
+                </Link>
               </p>
               <img src={require("../assets/imgs/main/hanwha_img01.png").default} alt="" />
 
