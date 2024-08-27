@@ -53,7 +53,7 @@
   font-family: "Plus Jakarta Sans";
   font-size: 140px;
   font-weight: 600;
-  line-height: 140px;
+  line-height: 1;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -90,7 +90,6 @@
   width: calc(100% - 100px);
   margin: 0 auto;
   padding: 0 0 50px;
-  height: 860px;
   flex-direction: column;
   background-position: center;
   background-repeat: no-repeat;
@@ -191,9 +190,10 @@
   padding-right: 50px;
   border-bottom: 1px solid #212121;
   overflow: hidden;
+  margin-top: 50px;
 }
 
-#aboutContent2 .lettWrap {
+#aboutContent2 .leftWrap {
   width: calc(100% - 490px);
   height: 100%;
   display: flex;
@@ -204,7 +204,7 @@
   padding-left: 250px;
 }
 
-#aboutContent2 .lettWrap span {
+#aboutContent2 .leftWrap span {
   font-family: "Plus Jakarta Sans";
   font-size: 130px;
   font-weight: 600;
@@ -214,11 +214,11 @@
   z-index: 1;
 }
 
-#aboutContent2 .lettWrap mark {
+#aboutContent2 .leftWrap mark {
   color: #969699;
 }
 
-#aboutContent2 .lettWrap p {
+#aboutContent2 .leftWrap p {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.4;
@@ -229,7 +229,7 @@
   z-index: 1;
 }
 
-#aboutContent2 .lettWrap .circle {
+#aboutContent2 .leftWrap .circle {
   width: 910px;
   height: 910px;
   border-radius: 50%;
@@ -238,7 +238,7 @@
   left: -660px;
 }
 
-#aboutContent2 .lettWrap .circle::after {
+#aboutContent2 .leftWrap .circle::after {
   content: "";
   width: 250px;
   height: 250px;
@@ -253,6 +253,7 @@
 
 #aboutContent2 .swiperWrap {
   height: 100%;
+  width: 490px;
 }
 #aboutContent2 .swiper {
   width: 100%;
@@ -306,7 +307,7 @@
 }
 
 #aboutContent3 {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 200px 0 100px 290px;
@@ -361,6 +362,11 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  font-family: Plus Jakarta Sans;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #9b9b9b;
 }
 
 #aboutContent3 .swiper-slide div {
@@ -443,11 +449,294 @@
   left: 0;
 }
 #aboutContent4 {
-  height: 100vh;
-  padding: 0 50px;
+  padding: 0 50px 150px;
 }
 
 #aboutContent4 video {
   width: 100%;
   object-fit: contain;
+}
+
+@media (max-width: 1800px) {
+  #aboutContent2 {
+    padding-right: 0;
+  }
+}
+@media (max-width: 1600px) {
+  #aboutVisualWrap {
+    background-position: center bottom -150px;
+  }
+
+  @keyframes about_opening {
+    100% {
+      background-position: center bottom -100px;
+    }
+  }
+
+  .keywordWrap .swiper-slide strong {
+    font-size: 6.5vw;
+  }
+
+  #aboutContent3 {
+    padding: 200px 0 100px 50px;
+  }
+  #mainContent3 hgroup {
+    width: 1050px;
+  }
+
+  #aboutContent2 .leftWrap {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  #aboutContent2 .swiperWrap {
+    width: 400px;
+  }
+
+  #aboutContent2 .leftWrap .circle {
+    width: 750px;
+    height: 750px;
+  }
+  #aboutContent2 .leftWrap .circle::after {
+    width: 180px;
+    height: 180px;
+    right: -190px;
+  }
+
+  #aboutContent2 .leftWrap span {
+    font-size: 7vw;
+  }
+}
+
+@media (max-width: 1450px) {
+  #aboutContent3 hgroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #aboutContent3 hgroup p {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 1300px) {
+  #aboutContent3 hgroup {
+    padding: 0 4% 0 0;
+  }
+
+  #aboutVisualWrap strong {
+    font-size: 9vw;
+  }
+
+  .keywordWrap {
+    height: 650px;
+  }
+
+  #aboutContent2 {
+    flex-direction: column;
+    height: fit-content;
+    padding: 300px 4% 0;
+  }
+
+  #aboutContent2 .leftWrap {
+    position: unset;
+  }
+  #aboutContent2 .leftWrap .circle {
+    width: 600px;
+    height: 600px;
+    top: -500px;
+    left: unset;
+  }
+  #aboutContent2 .leftWrap .circle::after {
+    width: 150px;
+    height: 150px;
+    top: unset;
+    bottom: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #aboutContent2 .swiperWrap {
+    width: 100%;
+    height: 725px;
+    margin-top: 80px;
+    border-top: 1px solid #212121;
+  }
+
+  #aboutContent2 .swiper {
+    padding: 0;
+    border-left: none;
+  }
+
+  #aboutContent2 .swiper-slide {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  #aboutContent2 .swiper-slide strong {
+    font-size: 40px;
+  }
+
+  #aboutContent3 .swiperWrap .info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  #aboutContent3 .swiperWrap .info ul {
+    margin-left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1024px) {
+  #aboutVisualWrap {
+    background-position: center bottom -100px;
+    padding: 0 4%;
+  }
+
+  @keyframes about_opening {
+    100% {
+      background-position: center bottom -50px;
+    }
+  }
+
+  .keywordWrap .swiper-slide strong {
+    font-size: 60px;
+  }
+
+  #aboutVisualWrap p {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  #aboutVisualWrap p sub::before {
+    display: none;
+  }
+
+  #aboutContent1 {
+    width: 92%;
+    padding: 0;
+  }
+
+  .keywordWrap .swiper-slide sub {
+    font-size: 15px;
+  }
+
+  .keywordWrap .left,
+  .keywordWrap .right {
+    transform: rotate(90deg);
+  }
+
+  .keywordWrap .left {
+    left: unset;
+    top: 32px;
+  }
+  .keywordWrap .right {
+    right: unset;
+    bottom: 32px;
+  }
+
+  #aboutContent2 .swiper-slide strong {
+    font-size: 35px;
+  }
+
+  #aboutContent3 {
+    padding: 80px 0 50px 4%;
+  }
+
+  #aboutContent3 hgroup h2 {
+    font-size: 30px;
+  }
+
+  #aboutContent3 hgroup {
+    margin-bottom: 50px;
+  }
+
+  #aboutContent3 .swiperWrap .info::before {
+    width: 76px;
+  }
+
+  #aboutContent3 .swiperWrap {
+    margin-bottom: 80px;
+  }
+
+  #aboutContent4 {
+    padding: 0 4% 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  #aboutVisualWrap {
+    background-position: center bottom -80px;
+    padding: 0 4%;
+  }
+
+  @keyframes about_opening {
+    100% {
+      background-position: center bottom -30px;
+    }
+  }
+
+  #aboutVisualWrap strong {
+    font-size: 66px;
+  }
+
+  .keywordWrap .swiper-slide strong {
+    font-size: 36px;
+  }
+
+  .keywordWrap {
+    height: 500px;
+  }
+
+  .keywordWrap .swiper-slide sub {
+    font-size: 13px;
+  }
+
+  #aboutContent2 .swiper-slide strong {
+    font-size: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  #aboutContent2 .leftWrap span {
+    font-size: 70px;
+  }
+
+  #aboutContent2 .leftWrap .circle {
+    width: 480px;
+    height: 480px;
+    top: -310px;
+    left: unset;
+  }
+  #aboutContent2 .leftWrap .circle::after {
+    width: 125px;
+    height: 125px;
+    bottom: -135px;
+  }
+
+  #aboutContent2 .leftWrap span {
+    margin-top: 30px;
+  }
+
+  #aboutContent2 .leftWrap p {
+    font-size: 15px;
+  }
+
+  #aboutContent2 .swiper-slide span {
+    font-size: 16px;
+  }
+  #aboutContent2 .swiper-slide p {
+    font-size: 13px;
+  }
+
+  #aboutContent3 hgroup h2 {
+    font-size: 26px;
+  }
+  #aboutContent3 hgroup p {
+    font-size: 15px;
+  }
 }

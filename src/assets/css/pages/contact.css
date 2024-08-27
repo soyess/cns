@@ -16,18 +16,21 @@
 }
 
 .contactPage main {
-  padding: 120px 0 150px 50px;
+  padding: 120px 0 150px;
   margin: 0 !important;
   width: 100%;
 }
 
 .contactPage main .map {
   width: 100%;
+  padding-left: 50px;
+  object-fit: cover;
 }
 
 .contactPage section {
   margin-top: 50px;
   display: flex;
+  padding: 0 50px;
 }
 
 .contactPage section .left {
@@ -39,7 +42,6 @@
 }
 .contactPage section .right {
   width: calc(100% - 170px);
-  padding-right: 50px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -48,7 +50,7 @@
 .contactPage section .right p {
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.4;
   text-align: left;
   color: #ffffff;
 }
@@ -56,7 +58,7 @@
 .contactPage section .right sub {
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.7;
   text-align: left;
   opacity: 0.6;
   color: #fff;
@@ -84,13 +86,85 @@
   width: 100%;
 }
 
+.contactPage section .right .contactBannerMo {
+  display: none;
+  width: 100%;
+}
+
 .contactPage section .right strong {
   font-size: 70px;
   font-weight: 600;
   line-height: 1;
-  text-align: right;
   color: #191919;
   position: absolute;
   top: 0;
   right: 50px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1500px) {
+  .contactPage section .right strong {
+    position: relative;
+    right: 0;
+    margin-top: 80px;
+  }
+
+  .contactPage section .right .contactBanner {
+    margin-top: 10px;
+  }
+
+  .contactPage main .map {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contactPage section {
+    padding: 0 4%;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .contactPage main {
+    padding: 100px 0 100px;
+  }
+
+  .contactPage section .right {
+    width: 100%;
+  }
+
+  .contactPage main .map {
+    height: 500px;
+  }
+
+  .contactPage section .right .contactBanner {
+    display: none;
+  }
+
+  .contactPage section .right .contactBannerMo {
+    display: block;
+    margin-top: 10px;
+  }
+  .contactPage section .right a {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactPage section .right strong {
+    font-size: 56px;
+  }
+
+  .contactPage section .right p {
+    font-size: 22px;
+  }
+
+  .contactPage section .right sub {
+    font-size: 13px;
+  }
+
+  .contactPage section .right a {
+    margin-top: 20px;
+  }
 }

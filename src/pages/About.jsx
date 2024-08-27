@@ -92,61 +92,61 @@ const PartnersShipData = {
   group2: [
     {
       title: "GCP Premier Partner (‘21.04)",
-      image: "../assets/imgs/about/partnership/group2/group2_01.png",
+      image: require("../assets/imgs/about/partnership/group2/partnership_group2_01.png").default,
     },
     {
       title: "국내최초 ML Specialization (‘21.07)",
-      image: "../assets/imgs/about/partnership/group2/group2_02.png",
+      image: require("../assets/imgs/about/partnership/group2/partnership_group2_02.png").default,
     },
     {
       title: "Infrastructure Specialization (’22.02)",
-      image: "../assets/imgs/about/partnership/group2/group2_03.png",
+      image: require("../assets/imgs/about/partnership/group2/partnership_group2_03.png").default,
     },
     {
       title: "Cloud Migration Specialization (’22.02)",
-      image: "../assets/imgs/about/partnership/group2/group2_04.png",
+      image: require("../assets/imgs/about/partnership/group2/partnership_group2_04.png").default,
     },
     {
       title: "Data Analytics Specialization (’23.11)",
-      image: "../assets/imgs/about/partnership/group2/group2_05.png",
+      image: require("../assets/imgs/about/partnership/group2/partnership_group2_05.png").default,
     },
     {
       title: "MSP Partner (’23 갱신)",
-      image: "../assets/imgs/about/partnership/group2/group2_06.png",
+      image: require("../assets/imgs/about/partnership/group2/partnership_group2_06.png").default,
     },
   ],
   group3: [
     {
       title: "Azure Expert MSP (‘24.06 갱신)",
-      image: "../assets/imgs/about/partnership/group3/group3_01.png",
+      image: require("../assets/imgs/about/partnership/group3/partnership_group3_01.png").default,
     },
     {
       title: "Microsoft Solution Partners (총 6개 영역 중 5개 획득)",
-      image: "../assets/imgs/about/partnership/group3/group3_02.png",
+      image: require("../assets/imgs/about/partnership/group3/partnership_group3_02.png").default,
     },
     {
       title: "",
-      image: "../assets/imgs/about/partnership/group3/group3_03.png",
+      image: require("../assets/imgs/about/partnership/group3/partnership_group3_03.png").default,
     },
     {
       title: "",
-      image: "../assets/imgs/about/partnership/group3/group3_04.png",
+      image: require("../assets/imgs/about/partnership/group3/partnership_group3_04.png").default,
     },
     {
       title: "",
-      image: "../assets/imgs/about/partnership/group3/group3_05.png",
+      image: require("../assets/imgs/about/partnership/group3/partnership_group3_05.png").default,
     },
     {
       title: "",
-      image: "../assets/imgs/about/partnership/group3/group3_06.png",
+      image: require("../assets/imgs/about/partnership/group3/partnership_group3_06.png").default,
     },
     {
       title: "Gold 파트너 인증 6건 (’22 갱신)",
-      image: "../assets/imgs/about/partnership/group3/group3_07.png",
+      image: require("../assets/imgs/about/partnership/group3/partnership_group3_07.png").default,
     },
     {
       title: "Gold 파트너 인증 6건 (’22 갱신)",
-      image: "../assets/imgs/about/partnership/group3/group3_08.png",
+      image: require("../assets/imgs/about/partnership/group3/partnership_group3_08.png").default,
     },
   ],
 };
@@ -208,7 +208,9 @@ const AboutPage = () => {
           </strong>
           <p>
             LG CNS는 약속합니다
-            <sub>최적화된 클라우드 서비스로 고객의 가치를 성장시키고 디지털 혁신의 꽃을 피워 가겠습니다.</sub>
+            <sub>
+              최적화된 클라우드 서비스로 고객의 가치를 <br className="br_600" /> 성장시키고 디지털 혁신의 꽃을 피워 가겠습니다.
+            </sub>
           </p>
         </section>
 
@@ -259,7 +261,8 @@ const AboutPage = () => {
           </div>
         </section>
         <section id="aboutContent2">
-          <div className="lettWrap">
+          <div className="leftWrap">
+            <div className="circle" ref={circleRef}></div>
             <span>
               Our <mark>Value</mark>
             </span>
@@ -267,13 +270,12 @@ const AboutPage = () => {
               30년 넘게 대한민국 IT산업의 발전을 이끌어 오면서 쌓아온 <br />
               전문성과 혁신성을 그대로 고객의 클라우드 서비스에 반영하여 고객의 가치를 한층 더 높이겠습니다.
             </p>
-            <div className="circle" ref={circleRef}></div>
           </div>
 
           <div className="swiperWrap">
             <Swiper
               spaceBetween={20}
-              slidesPerView={2.5}
+              slidesPerView={3}
               centeredSlides={true}
               direction={"vertical"}
               loop={true}
@@ -284,6 +286,12 @@ const AboutPage = () => {
               }}
               modules={[Autoplay]}
               onSlideChange={handleSlideChange}
+              breakpoints={{
+                1300: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 20,
+                },
+              }}
             >
               <SwiperSlide>
                 <strong>Technology</strong>
@@ -328,7 +336,31 @@ const AboutPage = () => {
             </p>
           </hgroup>
           <div className="swiperWrap">
-            <Swiper spaceBetween={10} slidesPerView={6.2} speed={800}>
+            <Swiper
+              spaceBetween={10}
+              slidesPerView={1.5}
+              speed={800}
+              breakpoints={{
+                550: {
+                  slidesPerView: 2.8,
+                },
+                768: {
+                  slidesPerView: 3.8,
+                },
+                1024: {
+                  slidesPerView: 4.3,
+                },
+                1300: {
+                  slidesPerView: 5,
+                },
+                1600: {
+                  slidesPerView: 5.3,
+                },
+                1800: {
+                  slidesPerView: 6.2,
+                },
+              }}
+            >
               {PartnersShipData.group1.map((item) => (
                 <SwiperSlide key={item.index}>
                   <div>
@@ -353,7 +385,28 @@ const AboutPage = () => {
             </div>
           </div>
           <div className="swiperWrap">
-            <Swiper spaceBetween={10} slidesPerView={6.2} speed={800}>
+            <Swiper
+              spaceBetween={10}
+              slidesPerView={1.5}
+              speed={800}
+              breakpoints={{
+                550: {
+                  slidesPerView: 2.8,
+                },
+                768: {
+                  slidesPerView: 3.8,
+                },
+                1024: {
+                  slidesPerView: 4.3,
+                },
+                1600: {
+                  slidesPerView: 5.3,
+                },
+                1800: {
+                  slidesPerView: 6.2,
+                },
+              }}
+            >
               {PartnersShipData.group2.map((item) => (
                 <SwiperSlide key={item.index}>
                   <div>
@@ -371,7 +424,28 @@ const AboutPage = () => {
             </div>
           </div>
           <div className="swiperWrap">
-            <Swiper spaceBetween={10} slidesPerView={6.2} speed={800}>
+            <Swiper
+              spaceBetween={10}
+              slidesPerView={1.5}
+              speed={800}
+              breakpoints={{
+                550: {
+                  slidesPerView: 2.8,
+                },
+                768: {
+                  slidesPerView: 3.8,
+                },
+                1024: {
+                  slidesPerView: 4.3,
+                },
+                1600: {
+                  slidesPerView: 5.3,
+                },
+                1800: {
+                  slidesPerView: 6.2,
+                },
+              }}
+            >
               {PartnersShipData.group3.map((item) => (
                 <SwiperSlide key={item.index}>
                   <div>

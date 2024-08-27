@@ -1104,8 +1104,11 @@
     display: none;
   }
 
-  .mainPage {
-    padding: 0;
+  .mainPage,
+  .aboutPage,
+  .servicePage,
+  .contactPage {
+    padding: 0 !important;
   }
 
   #mainVisualWrap .visualTitle {
@@ -1677,8 +1680,16 @@
   }
 }
 
+.br_600 {
+  display: none;
+}
 .br_500 {
   display: none;
+}
+@media (max-width: 600px) {
+  .br_600 {
+    display: block;
+  }
 }
 @media (max-width: 500px) {
   .br_500 {

@@ -16,7 +16,7 @@
 }
 
 .servicePage main {
-  padding: 0 0 150px 50px;
+  /* padding: 0 50px 150px; */
   margin: 0 !important;
   width: 100%;
 }
@@ -32,17 +32,28 @@
   font-family: Plus Jakarta Sans;
   font-size: 120px;
   font-weight: 500;
-  line-height: 120px;
+  line-height: 1.2;
   text-align: center;
   color: #fff;
   display: block;
 }
 
 .servicePage #serviceContent1 {
-  border-top: 1px solid #343434;
   padding-top: 50px;
   padding-bottom: 150px;
   flex-direction: column;
+  position: relative;
+}
+
+.servicePage #serviceContent1::before {
+  content: "";
+  width: calc(100% - 100px);
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: #343434;
+  transform: translateX(-50%);
 }
 
 .servicePage section {
@@ -70,6 +81,7 @@
   text-align: left;
   margin-left: 150px;
   opacity: 0.7;
+  word-break: keep-all;
 }
 
 .servicePage .videoWrap {
@@ -88,6 +100,7 @@
 
 #serviceContent2 {
   gap: 60px;
+  padding-bottom: 100px;
 }
 
 #serviceContent2 > .left {
@@ -161,10 +174,16 @@
   line-height: 1.5;
   text-align: left;
   margin: 24px 0 80px;
+  word-break: keep-all;
 }
 
 #serviceContent2 .right > img {
   width: 100%;
+}
+
+#serviceContent2 .right img.mo {
+  display: none;
+  max-width: 500px;
 }
 
 #serviceContent2 .right ul {
@@ -224,5 +243,227 @@
   line-height: 1.4;
   text-align: left;
   color: #929292;
+  word-break: keep-all;
   margin-top: 12px;
+}
+
+#serviceContent2 .right ul li p br {
+  display: none;
+}
+
+@media (max-width: 1600px) {
+  .servicePage section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  #serviceVisualWrap strong {
+    font-size: 7.5vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  #serviceContent2 {
+    flex-direction: column;
+    padding: 0 0 100px;
+  }
+
+  #serviceContent2 > .left {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    padding: 0 30px;
+  }
+
+  #serviceContent2 > .left::-webkit-scrollbar {
+    display: none;
+  }
+
+  #serviceContent2 > .left li {
+    padding: 0;
+    min-width: fit-content;
+  }
+
+  #serviceContent2 > .left li p {
+    height: 100%;
+    padding: 20px;
+  }
+
+  #serviceContent2 .right {
+    width: 100%;
+    padding: 0 50px 100px;
+  }
+
+  #serviceContent2 > .left li p {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+  #serviceContent2 > .left li.is_active p {
+    background: linear-gradient(90deg, #351321 0%, #101010 100%);
+    border-left: none;
+    border-bottom: 2px solid #c8125b;
+    color: #f12174 !important;
+  }
+}
+@media (max-width: 1250px) {
+  .servicePage section hgroup {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .servicePage section hgroup p,
+  .servicePage section hgroup sub {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .servicePage section hgroup p br {
+    display: none;
+  }
+
+  #serviceContent2 .right ul {
+    margin-top: 90px;
+    padding-top: 50px;
+    gap: 30px;
+  }
+
+  #serviceContent2 .right ul {
+    flex-wrap: wrap;
+  }
+  #serviceContent2 .right ul.quarter li {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 1024px) {
+  #serviceVisualWrap {
+    padding: 150px 0 60px;
+  }
+
+  .servicePage section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  #serviceContent2 .right {
+    padding: 0 4%;
+  }
+
+  #serviceContent2 > .left li {
+    min-width: fit-content;
+  }
+  #serviceContent2 > .left li p sub {
+    display: none;
+  }
+
+  #serviceContent2 > .left li p span mark {
+    display: none;
+  }
+
+  #serviceContent2 > .left li p span {
+    text-align: center;
+  }
+
+  #serviceContent2 .right .title {
+    font-size: 27px;
+  }
+
+  #serviceContent2 .right .description {
+    font-size: 16px;
+    margin: 20px 0 50px;
+  }
+
+  #serviceContent2 .right ul sub {
+    font-size: 14px;
+  }
+
+  #serviceContent2 > .left li.is_active p {
+    background: none;
+  }
+
+  #serviceContent2 > .left li p {
+    padding: 16px 12px;
+  }
+
+  #serviceContent2 > .left {
+    padding: 0 4%;
+  }
+
+  #serviceContent2 {
+    gap: 50px;
+  }
+
+  #serviceContent2 .right ul li p br {
+    display: block;
+  }
+
+  .servicePage #serviceContent1 {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  #serviceVisualWrap strong {
+    font-size: 50px;
+  }
+  .servicePage section hgroup p {
+    font-size: 16px;
+  }
+
+  .servicePage section hgroup sub {
+    font-size: 13px;
+  }
+
+  #serviceContent2 .right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #serviceContent2 .right .title {
+    font-size: 22px;
+  }
+
+  #serviceContent2 .right .description {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  #serviceContent2 .right ul sub {
+    font-size: 13px;
+  }
+
+  #serviceContent2 .right ul {
+    gap: 50px;
+  }
+
+  #serviceContent2 .right ul li,
+  #serviceContent2 .right ul.quarter li {
+    width: 100%;
+    align-items: center;
+  }
+  #serviceContent2 .right ul li img {
+    margin-bottom: 10px;
+  }
+  #serviceContent2 .right ul li p {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  #serviceContent2 .right img.pc {
+    display: none;
+  }
+  #serviceContent2 .right img.mo {
+    display: block;
+  }
+
+  #serviceContent2 > .left li p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicePage section hgroup sub br {
+    display: none;
+  }
 }
